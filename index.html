@@ -1,0 +1,1979 @@
+  <!DOCTYPE html>
+<html lang="en" data-bs-theme="light" data-pwa="true">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+
+    <!-- SEO Meta Tags -->
+    <title>Terpenes Plus</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <!-- Webmanifest + Favicon / App icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" href="assets/app-icons/icon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="assets/app-icons/icon-180x180.png">
+
+    <!-- Theme switcher (color modes) -->
+    <script src="assets/js/theme-switcher.js"></script>
+
+    <!-- Preloaded local web font (Inter) -->
+    <link rel="preload" href="assets/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Font icons -->
+    <link rel="preload" href="assets/icons/cartzilla-icons.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/icons/cartzilla-icons.min.css">
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/vendor/simplebar/dist/simplebar.min.css">
+
+    <!-- Bootstrap + Theme styles -->
+    <link rel="preload" href="assets/css/theme.min.css" as="style">
+    <link rel="preload" href="assets/css/theme.rtl.min.css" as="style">
+    <link rel="stylesheet" href="assets/css/theme.min.css" id="theme-styles">
+  </head>
+
+
+  <!-- Body -->
+  <body>
+
+    <!-- Shopping cart offcanvas -->
+    <div class="offcanvas offcanvas-end pb-sm-2 px-sm-2" id="shoppingCart" tabindex="-1" aria-labelledby="shoppingCartLabel" style="width: 500px">
+
+      <!-- Header -->
+      <div class="offcanvas-header flex-column align-items-start py-3 pt-lg-4">
+        <div class="d-flex align-items-center justify-content-between w-100 mb-3 mb-lg-4">
+          <h4 class="offcanvas-title" id="shoppingCartLabel">Shopping cart</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <p class="fs-sm">Buy <span class="text-dark-emphasis fw-semibold">$53</span> more to get <span class="text-dark-emphasis fw-semibold">Free Shipping</span></p>
+        <div class="progress w-100" role="progressbar" aria-label="Free shipping progress" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="height: 4px">
+          <div class="progress-bar bg-dark rounded-pill d-none-dark" style="width: 78%"></div>
+          <div class="progress-bar bg-light rounded-pill d-none d-block-dark" style="width: 78%"></div>
+        </div>
+      </div>
+
+      <!-- Items -->
+      <div class="offcanvas-body d-flex flex-column gap-4 pt-2">
+
+        <!-- Item -->
+        <div class="d-flex align-items-center">
+          <a class="flex-shrink-0" href="shop-product-fashion.html">
+            <img src="assets/img/shop/fashion/thumbs/07.png" class="bg-body-tertiary rounded" width="110" alt="Thumbnail">
+          </a>
+          <div class="w-100 min-w-0 ps-3">
+            <h5 class="d-flex animate-underline mb-2">
+              <a class="d-block fs-sm fw-medium text-truncate animate-target" href="shop-product-fashion.html">Leather sneakers with golden laces</a>
+            </h5>
+            <div class="h6 pb-1 mb-2">$74.00</div>
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="count-input rounded-2">
+                <button type="button" class="btn btn-icon btn-sm" data-decrement aria-label="Decrement quantity">
+                  <i class="ci-minus"></i>
+                </button>
+                <input type="number" class="form-control form-control-sm" value="1" readonly>
+                <button type="button" class="btn btn-icon btn-sm" data-increment aria-label="Increment quantity">
+                  <i class="ci-plus"></i>
+                </button>
+              </div>
+              <button type="button" class="btn-close fs-sm" data-bs-toggle="tooltip" data-bs-custom-class="tooltip-sm" data-bs-title="Remove" aria-label="Remove from cart"></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="d-flex align-items-center">
+          <a class="flex-shrink-0" href="shop-product-fashion.html">
+            <img src="assets/img/shop/fashion/thumbs/08.png" class="bg-body-tertiary rounded" width="110" alt="Thumbnail">
+          </a>
+          <div class="w-100 min-w-0 ps-3">
+            <h5 class="d-flex animate-underline mb-2">
+              <a class="d-block fs-sm fw-medium text-truncate animate-target" href="shop-product-fashion.html">Classic cotton men's shirt</a>
+            </h5>
+            <div class="h6 pb-1 mb-2">$27.00</div>
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="count-input rounded-2">
+                <button type="button" class="btn btn-icon btn-sm" data-decrement aria-label="Decrement quantity">
+                  <i class="ci-minus"></i>
+                </button>
+                <input type="number" class="form-control form-control-sm" value="1" readonly>
+                <button type="button" class="btn btn-icon btn-sm" data-increment aria-label="Increment quantity">
+                  <i class="ci-plus"></i>
+                </button>
+              </div>
+              <button type="button" class="btn-close fs-sm" data-bs-toggle="tooltip" data-bs-custom-class="tooltip-sm" data-bs-title="Remove" aria-label="Remove from cart"></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="d-flex align-items-center">
+          <a class="flex-shrink-0" href="shop-product-fashion.html">
+            <img src="assets/img/shop/fashion/thumbs/09.png" class="bg-body-tertiary rounded" width="110" alt="Thumbnail">
+          </a>
+          <div class="w-100 min-w-0 ps-3">
+            <h5 class="d-flex animate-underline mb-2">
+              <a class="d-block fs-sm fw-medium text-truncate animate-target" href="shop-product-fashion.html">Polarized sunglasses for men</a>
+            </h5>
+            <div class="h6 pb-1 mb-2">$96.00 <del class="text-body-tertiary fs-xs fw-normal">112.00</del></div>
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="count-input rounded-2">
+                <button type="button" class="btn btn-icon btn-sm" data-decrement aria-label="Decrement quantity">
+                  <i class="ci-minus"></i>
+                </button>
+                <input type="number" class="form-control form-control-sm" value="1" readonly>
+                <button type="button" class="btn btn-icon btn-sm" data-increment aria-label="Increment quantity">
+                  <i class="ci-plus"></i>
+                </button>
+              </div>
+              <button type="button" class="btn-close fs-sm" data-bs-toggle="tooltip" data-bs-custom-class="tooltip-sm" data-bs-title="Remove" aria-label="Remove from cart"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="offcanvas-header flex-column align-items-start">
+        <div class="d-flex align-items-center justify-content-between w-100 mb-3 mb-md-4">
+          <span class="text-light-emphasis">Subtotal:</span>
+          <span class="h6 mb-0">$197.00</span>
+        </div>
+        <div class="d-flex w-100 gap-3">
+          <a class="btn btn-lg btn-secondary w-100" href="#!">View cart</a>
+          <a class="btn btn-lg btn-dark w-100" href="#!">Checkout</a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Search offcanvas -->
+    <div class="offcanvas offcanvas-top" id="searchBox" data-bs-backdrop="static" tabindex="-1">
+      <div class="offcanvas-header border-bottom p-0 py-lg-1">
+        <form class="container d-flex align-items-center">
+          <input type="search" class="form-control form-control-lg fs-lg border-0 rounded-0 py-3 ps-0" placeholder="Search the products" data-autofocus="offcanvas">
+          <button type="reset" class="btn-close fs-lg" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </form>
+      </div>
+      <div class="offcanvas-body px-0">
+        <div class="container text-center">
+          <svg class="text-body-tertiary opacity-60 mb-4" xmlns="http://www.w3.org/2000/svg" width="60" viewBox="0 0 512 512" fill="currentColor"><path d="M340.115,361.412l-16.98-16.98c-34.237,29.36-78.733,47.098-127.371,47.098C87.647,391.529,0,303.883,0,195.765S87.647,0,195.765,0s195.765,87.647,195.765,195.765c0,48.638-17.738,93.134-47.097,127.371l16.98,16.98l11.94-11.94c5.881-5.881,15.415-5.881,21.296,0l112.941,112.941c5.881,5.881,5.881,15.416,0,21.296l-45.176,45.176c-5.881,5.881-15.415,5.881-21.296,0L328.176,394.648c-5.881-5.881-5.881-15.416,0-21.296L340.115,361.412z M195.765,361.412c91.484,0,165.647-74.163,165.647-165.647S287.249,30.118,195.765,30.118S30.118,104.28,30.118,195.765S104.28,361.412,195.765,361.412z M360.12,384l91.645,91.645l23.88-23.88L384,360.12L360.12,384z M233.034,233.033c5.881-5.881,15.415-5.881,21.296,0c5.881,5.881,5.881,15.416,0,21.296c-32.345,32.345-84.786,32.345-117.131,0c-5.881-5.881-5.881-15.415,0-21.296c5.881-5.881,15.416-5.881,21.296,0C179.079,253.616,212.45,253.616,233.034,233.033zM135.529,180.706c-12.475,0-22.588-10.113-22.588-22.588c0-12.475,10.113-22.588,22.588-22.588c12.475,0,22.588,10.113,22.588,22.588C158.118,170.593,148.005,180.706,135.529,180.706z M256,180.706c-12.475,0-22.588-10.113-22.588-22.588c0-12.475,10.113-22.588,22.588-22.588s22.588,10.113,22.588,22.588C278.588,170.593,268.475,180.706,256,180.706z"/></svg>
+          <h6 class="mb-2">Your search results will appear here</h6>
+          <p class="fs-sm mb-0">Start typing in the search field above to see instant search results.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Topbar -->
+    <div class="bg-dark text-white py-2 py-lg-3">
+      <div class="px-4 px-lg-5 d-flex justify-content-between align-items-center">
+    
+        <!-- Left Text -->
+        <div class="fs-xs">
+          Free Shipping on Orders $150+ in the U.S.
+        </div>
+    
+        <!-- Right Links -->
+        <div class="d-lg-flex align-items-center fs-xs d-none">
+          <a href="#" class="text-white text-decoration-none me-3">Quick Order</a>
+          <a href="#" class="text-white text-decoration-none me-3">COA & Document Finder</a>
+          <a href="#" class="text-white text-decoration-none me-3">Help</a>
+          <a href="#" class="text-white text-decoration-none me-3">Request Samples</a>
+          <div class="dropdown border-start ps-3">
+            <a class="text-white text-decoration-none d-flex align-items-center" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+          
+              <i class="fs-sm me-2 ci-globe"></i>
+              ENGLISH
+            </a>
+          
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">English</a></li>
+              <li><a class="dropdown-item" href="#">Spanish</a></li>
+              <li><a class="dropdown-item" href="#">Japanese</a></li>
+              <li><a class="dropdown-item" href="#">German</a></li>
+              <li><a class="dropdown-item" href="#">French</a></li>
+              <li><a class="dropdown-item" href="#">Portuguese</a></li>
+              <li><a class="dropdown-item" href="#">Chinese (Simplified)</a></li>
+              <li><a class="dropdown-item" href="#">Dutch</a></li>
+              <li><a class="dropdown-item" href="#">Italian</a></li>
+            </ul>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+
+
+    <!-- Navigation bar (Page header) -->
+    <header class="navbar navbar-expand-lg navbar-sticky bg-body d-block z-fixed p-0" data-sticky-navbar='{"offset": 500}'>
+      <div class="container py-2 py-lg-3">
+        <div class="d-flex align-items-center gap-3">
+
+          <!-- Mobile offcanvas menu toggler (Hamburger) -->
+          <button type="button" class="navbar-toggler me-4 me-md-2" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Country slect visible on screens > 768px wide (md breakpoint) -->
+          <div class="dropdown d-none d-md-block nav">
+            <a class="nav-link dropdown-toggle py-1 px-0" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Country select: USA">
+              <div class="ratio ratio-1x1" style="width: 20px">
+                <img src="assets/img/flags/en-us.png" alt="USA">
+              </div>
+            </a>
+            <ul class="dropdown-menu fs-sm" style="--cz-dropdown-spacer: .5rem">
+              <li>
+                <a class="dropdown-item" href="#!">
+                  <img src="assets/img/flags/en-uk.png" class="flex-shrink-0 me-2" width="20" alt="United Kingdom">
+                  United Kingdom
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#!">
+                  <img src="assets/img/flags/fr.png" class="flex-shrink-0 me-2" width="20" alt="France">
+                  France
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#!">
+                  <img src="assets/img/flags/de.png" class="flex-shrink-0 me-2" width="20" alt="Deutschland">
+                  Deutschland
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#!">
+                  <img src="assets/img/flags/it.png" class="flex-shrink-0 me-2" width="20" alt="Italia">
+                  Italia
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- City slect visible on screens > 768px wide (md breakpoint) -->
+          <div class="dropdown d-none d-md-block nav">
+            <a class="nav-link animate-underline dropdown-toggle fw-normal py-1 px-0" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="animate-target">Washington</span>
+            </a>
+            <ul class="dropdown-menu fs-sm" style="--cz-dropdown-spacer: .5rem">
+              <li><a class="dropdown-item" href="#!">Chicago</a></li>
+              <li><a class="dropdown-item" href="#!">Los Angeles</a></li>
+              <li><a class="dropdown-item" href="#!">New York</a></li>
+              <li><a class="dropdown-item" href="#!">Philadelphia</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Navbar brand (Logo) -->
+        <a class="navbar-brand fs-2 py-0 m-0 me-auto me-sm-n5" href="index.html">Cartzilla</a>
+
+        <!-- Button group -->
+        <div class="d-flex align-items-center">
+
+          <!-- Navbar stuck nav toggler -->
+          <button type="button" class="navbar-toggler d-none navbar-stuck-show me-3" data-bs-toggle="collapse" data-bs-target="#stuckNav" aria-controls="stuckNav" aria-expanded="false" aria-label="Toggle navigation in navbar stuck state">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Theme switcher (light/dark/auto) -->
+          <div class="dropdown">
+            <button type="button" class="theme-switcher btn btn-icon btn-lg btn-outline-secondary fs-lg border-0 rounded-circle animate-scale" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Toggle theme (light)">
+              <span class="theme-icon-active d-flex animate-target">
+                <i class="ci-sun"></i>
+              </span>
+            </button>
+            <ul class="dropdown-menu" style="--cz-dropdown-min-width: 9rem">
+              <li>
+                <button type="button" class="dropdown-item active" data-bs-theme-value="light" aria-pressed="true">
+                  <span class="theme-icon d-flex fs-base me-2">
+                    <i class="ci-sun"></i>
+                  </span>
+                  <span class="theme-label">Light</span>
+                  <i class="item-active-indicator ci-check ms-auto"></i>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item" data-bs-theme-value="dark" aria-pressed="false">
+                  <span class="theme-icon d-flex fs-base me-2">
+                    <i class="ci-moon"></i>
+                  </span>
+                  <span class="theme-label">Dark</span>
+                  <i class="item-active-indicator ci-check ms-auto"></i>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item" data-bs-theme-value="auto" aria-pressed="false">
+                  <span class="theme-icon d-flex fs-base me-2">
+                    <i class="ci-auto"></i>
+                  </span>
+                  <span class="theme-label">Auto</span>
+                  <i class="item-active-indicator ci-check ms-auto"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Search toggle button visible on screens < 992px wide (lg breakpoint) -->
+          <button type="button" class="btn btn-icon btn-lg fs-xl btn-outline-secondary border-0 rounded-circle animate-shake d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#searchBox" aria-controls="searchBox" aria-label="Toggle search bar">
+            <i class="ci-search animate-target"></i>
+          </button>
+
+          <!-- Account button visible on screens > 768px wide (md breakpoint) -->
+          <a class="btn btn-icon btn-lg fs-lg btn-outline-secondary border-0 rounded-circle animate-shake d-none d-md-inline-flex" href="account-signin.html">
+            <i class="ci-user animate-target"></i>
+            <span class="visually-hidden">Account</span>
+          </a>
+
+          <!-- Wishlist button visible on screens > 768px wide (md breakpoint) -->
+          <a class="btn btn-icon btn-lg fs-lg btn-outline-secondary border-0 rounded-circle animate-pulse d-none d-md-inline-flex" href="#!">
+            <i class="ci-heart animate-target"></i>
+            <span class="visually-hidden">Wishlist</span>
+          </a>
+
+          <!-- Cart button -->
+          <button type="button" class="btn btn-icon btn-lg fs-xl btn-outline-secondary position-relative border-0 rounded-circle animate-scale" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart" aria-label="Shopping cart">
+            <span class="position-absolute top-0 start-100 badge fs-xs text-bg-primary rounded-pill mt-1 ms-n4 z-2" style="--cz-badge-padding-y: .25em; --cz-badge-padding-x: .42em">3</span>
+            <i class="ci-shopping-bag animate-target me-1"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Main navigation that turns into offcanvas on screens < 992px wide (lg breakpoint) -->
+      <div class="collapse navbar-stuck-hide" id="stuckNav">
+        <nav class="offcanvas offcanvas-start" id="navbarNav" tabindex="-1" aria-labelledby="navbarNavLabel">
+          <div class="offcanvas-header py-3">
+            <h5 class="offcanvas-title" id="navbarNavLabel">Browse Cartzilla</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+
+          <!-- Country and City slects visible on screens < 768px wide (md breakpoint) -->
+          <div class="offcanvas-header gap-3 d-md-none pt-0 pb-3">
+            <div class="dropdown nav">
+              <a class="nav-link dropdown-toggle py-1 px-0" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Country select: USA">
+                <div class="ratio ratio-1x1" style="width: 20px">
+                  <img src="assets/img/flags/en-us.png" alt="USA">
+                </div>
+              </a>
+              <ul class="dropdown-menu fs-sm" style="--cz-dropdown-spacer: .5rem">
+                <li>
+                  <a class="dropdown-item" href="#!">
+                    <img src="assets/img/flags/en-uk.png" class="flex-shrink-0 me-2" width="20" alt="United Kingdom">
+                    United Kingdom
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#!">
+                    <img src="assets/img/flags/fr.png" class="flex-shrink-0 me-2" width="20" alt="France">
+                    France
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#!">
+                    <img src="assets/img/flags/de.png" class="flex-shrink-0 me-2" width="20" alt="Deutschland">
+                    Deutschland
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#!">
+                    <img src="assets/img/flags/it.png" class="flex-shrink-0 me-2" width="20" alt="Italia">
+                    Italia
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown nav">
+              <a class="nav-link animate-underline dropdown-toggle fw-normal py-1 px-0" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="animate-target">Washington</span>
+              </a>
+              <ul class="dropdown-menu fs-sm" style="--cz-dropdown-spacer: .5rem">
+                <li><a class="dropdown-item" href="#!">Chicago</a></li>
+                <li><a class="dropdown-item" href="#!">Los Angeles</a></li>
+                <li><a class="dropdown-item" href="#!">New York</a></li>
+                <li><a class="dropdown-item" href="#!">Philadelphia</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="offcanvas-body pt-1 pb-3 py-lg-0">
+            <div class="container pb-lg-2 px-0 px-lg-3">
+
+              <div class="position-relative d-lg-flex align-items-center justify-content-between">
+
+                <!-- Categories mega menu -->
+                <div class="navbar-nav">
+                  <div class="dropdown position-static pb-lg-2">
+                    <button type="button" class="nav-link animate-underline fw-semibold text-uppercase ps-0" data-bs-toggle="dropdown" data-bs-trigger="hover" data-bs-auto-close="outside" aria-expanded="false">
+                      <i class="ci-menu fs-lg me-2"></i>
+                      <span class="animate-target">Categories</span>
+                    </button>
+                    <div class="dropdown-menu w-100 p-4 px-xl-5" style="--cz-dropdown-spacer: .75rem">
+
+                      <!-- Nav tabs -->
+                      <ul class="nav nav-underline justify-content-lg-center mt-n2 mt-lg-0 mb-4" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button type="button" class="nav-link text-uppercase active" id="womens-tab" data-bs-toggle="tab" data-bs-target="#womens-tab-pane" role="tab" aria-controls="womens-tab-pane" aria-selected="true">
+                            Women's
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button type="button" class="nav-link text-uppercase" id="mens-tab" data-bs-toggle="tab" data-bs-target="#mens-tab-pane" role="tab" aria-controls="mens-tab-pane" aria-selected="false">
+                            Men's
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button type="button" class="nav-link text-uppercase" id="kids-tab" data-bs-toggle="tab" data-bs-target="#kids-tab-pane" role="tab" aria-controls="kids-tab-pane" aria-selected="false">
+                            Kids'
+                          </button>
+                        </li>
+                      </ul>
+
+                      <!-- Tab panes -->
+                      <div class="tab-content pb-xl-4">
+
+                        <!-- Women's tab -->
+                        <div class="tab-pane fade show active" id="womens-tab-pane" role="tabpanel" aria-labelledby="womens-tab">
+                          <div class="row g-4">
+                            <div class="col-lg-2">
+                              <a class="d-inline-flex animate-underline h6 text-dark-emphasis text-decoration-none mb-2" href="shop-catalog-fashion.html">
+                                <span class="animate-target">Clothing</span>
+                              </a>
+                              <ul class="nav flex-column gap-2 mt-0">
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Shirts &amp; Tops</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Coats &amp; Outerwear</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Underwear</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Sweatshirts</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Dresses</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Swimwear</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">View all</a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="col-lg-2">
+                              <a class="d-inline-flex animate-underline h6 text-dark-emphasis text-decoration-none mb-2" href="shop-catalog-fashion.html">
+                                <span class="animate-target">Shoes</span>
+                              </a>
+                              <ul class="nav flex-column gap-2 mt-0">
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Boots</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Sandals</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Heels</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Loafers</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Slippers</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Oxfords</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">View all</a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="col-lg-2">
+                              <a class="d-inline-flex animate-underline h6 text-dark-emphasis text-decoration-none mb-2" href="shop-catalog-fashion.html">
+                                <span class="animate-target">Accessories</span>
+                              </a>
+                              <ul class="nav flex-column gap-2 mt-0">
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Handbags</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Eyewear</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Hats</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Watches</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Jewelry</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Belts</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">View all</a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="col-lg-2">
+                              <div class="h6 mb-2">Specialty Sizes</div>
+                              <ul class="nav flex-column gap-2 mt-0">
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Plus Size</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Petite</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Wide Shoes</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Narrow Shoes</a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="col-lg-4 d-none d-lg-block" data-bs-theme="light">
+                              <div class="position-relative d-flex flex-column h-100 rounded-4 overflow-hidden p-4">
+                                <div class="position-relative d-flex flex-column justify-content-between h-100 z-2 pt-xl-2 ps-xl-2">
+                                  <div class="h4 lh-base">Women's<br>Heels<br>Collection</div>
+                                  <div>
+                                    <a class="btn btn-sm btn-dark stretched-link" href="shop-catalog-fashion.html" data-bs-theme="light">Shop now</a>
+                                  </div>
+                                </div>
+                                <img src="assets/img/mega-menu/fashion/01.jpg" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover rtl-flip" alt="Image">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Men's tab -->
+                        <div class="tab-pane fade" id="mens-tab-pane" role="tabpanel" aria-labelledby="mens-tab">
+                          <div class="row g-4">
+                            <div class="col-lg-2">
+                              <a class="d-inline-flex animate-underline h6 text-dark-emphasis text-decoration-none mb-2" href="shop-catalog-fashion.html">
+                                <span class="animate-target">Clothing</span>
+                              </a>
+                              <ul class="nav flex-column gap-2 mt-0">
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">T-Shirts</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Jeans</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Coats &amp; Outerwear</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Sweatshirts</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Underwear</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Pants</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">View all</a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="col-lg-2">
+                              <a class="d-inline-flex animate-underline h6 text-dark-emphasis text-decoration-none mb-2" href="shop-catalog-fashion.html">
+                                <span class="animate-target">Shoes</span>
+                              </a>
+                              <ul class="nav flex-column gap-2 mt-0">
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Sneakers</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Oxfords</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Loafers</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Sandals</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Boots</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Slippers</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">View all</a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="col-lg-2">
+                              <a class="d-inline-flex animate-underline h6 text-dark-emphasis text-decoration-none mb-2" href="shop-catalog-fashion.html">
+                                <span class="animate-target">Accessories</span>
+                              </a>
+                              <ul class="nav flex-column gap-2 mt-0">
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Backpacks</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Sunglasses</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Bags</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Watches</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Hats</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Belts</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">View all</a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="col-lg-2">
+                              <div class="h6 mb-2">Specialty Shops</div>
+                              <ul class="nav flex-column gap-2 mt-0">
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Active Wear</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Sports Clothing</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Athletic Shoes</a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="col-lg-4 d-none d-lg-block" data-bs-theme="dark">
+                              <div class="position-relative d-flex flex-column h-100 rounded-4 overflow-hidden p-4">
+                                <div class="position-relative d-flex flex-column justify-content-between h-100 z-2 pt-xl-2 ps-xl-2">
+                                  <div class="h4 lh-base">Men's<br>Sunglasses<br>Offers</div>
+                                  <div>
+                                    <a class="btn btn-sm btn-dark stretched-link" href="shop-catalog-fashion.html" data-bs-theme="dark">Shop now</a>
+                                  </div>
+                                </div>
+                                <img src="assets/img/mega-menu/fashion/02.jpg" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover rtl-flip" alt="Image">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Kids' tab -->
+                        <div class="tab-pane fade" id="kids-tab-pane" role="tabpanel" aria-labelledby="kids-tab">
+                          <div class="row g-4">
+                            <div class="col-lg-2">
+                              <a class="d-inline-flex animate-underline h6 text-dark-emphasis text-decoration-none mb-2" href="shop-catalog-fashion.html">
+                                <span class="animate-target">Boys</span>
+                              </a>
+                              <ul class="nav flex-column gap-2 mt-0">
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Pants</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Sneakers</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Coats &amp; Outerwear</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Sweatshirts</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Boots</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Shorts</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">View all</a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="col-lg-2">
+                              <a class="d-inline-flex animate-underline h6 text-dark-emphasis text-decoration-none mb-2" href="shop-catalog-fashion.html">
+                                <span class="animate-target">Girls</span>
+                              </a>
+                              <ul class="nav flex-column gap-2 mt-0">
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Shirts &amp; Tops</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Dresses</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Sneakers</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Hoodies</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Sandals</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Coats &amp; Outerwear</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">View all</a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="col-lg-2">
+                              <a class="d-inline-flex animate-underline h6 text-dark-emphasis text-decoration-none mb-2" href="shop-catalog-fashion.html">
+                                <span class="animate-target">Accessories</span>
+                              </a>
+                              <ul class="nav flex-column gap-2 mt-0">
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Backpacks</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Gloves</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Shoe Laces</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Scarves</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Hats</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Belts</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">View all</a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="col-lg-2">
+                              <div class="h6 mb-2">Shop by Age</div>
+                              <ul class="nav flex-column gap-2 mt-0">
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Infant</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Toddler</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Little Kid</a>
+                                </li>
+                                <li class="d-flex w-100 pt-1">
+                                  <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Big Kid</a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="col-lg-4 d-none d-lg-block" data-bs-theme="light">
+                              <div class="position-relative d-flex flex-column h-100 rounded-4 overflow-hidden p-4">
+                                <div class="position-relative d-flex flex-column justify-content-between h-100 z-2 pt-xl-2 ps-xl-2">
+                                  <div class="h4 lh-base">Kids'<br>Spring<br>Collection</div>
+                                  <div>
+                                    <a class="btn btn-sm btn-dark stretched-link" href="shop-catalog-fashion.html" data-bs-theme="light">Shop now</a>
+                                  </div>
+                                </div>
+                                <img src="assets/img/mega-menu/fashion/03.jpg" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover rtl-flip" alt="Image">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Navbar nav -->
+                <ul class="navbar-nav position-relative me-xl-n5">
+                  <li class="nav-item dropdown pb-lg-2 me-lg-n1 me-xl-0">
+                    <a class="nav-link dropdown-toggle active" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Home</a>
+                    <ul class="dropdown-menu" style="--cz-dropdown-spacer: .75rem">
+                      <li class="hover-effect-opacity px-2 mx-n2">
+                        <a class="dropdown-item d-block mb-0" href="home-electronics.html">
+                          <span class="fw-medium">Electronics Store</span>
+                          <span class="d-block fs-xs text-body-secondary">Megamenu + Hero slider</span>
+                          <div class="d-none d-lg-block hover-effect-target position-absolute top-0 start-100 bg-body border border-light-subtle rounded rounded-start-0 transition-none invisible opacity-0 pt-2 px-2 ms-n2" style="width: 212px; height: calc(100% + 2px); margin-top: -1px">
+                            <img class="position-relative z-2 d-none-dark" src="assets/img/mega-menu/demo-preview/electronics-light.jpg" alt="Electronics Store">
+                            <img class="position-relative z-2 d-none d-block-dark" src="assets/img/mega-menu/demo-preview/electronics-dark.jpg" alt="Electronics Store">
+                            <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none-dark" style="box-shadow: .875rem .5rem 2rem -.5rem #676f7b; opacity: .1"></span>
+                            <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none d-block-dark" style="box-shadow: .875rem .5rem 1.875rem -.5rem #080b12; opacity: .25"></span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="hover-effect-opacity px-2 mx-n2">
+                        <a class="dropdown-item d-block mb-0" href="home-fashion-v1.html">
+                          <span class="fw-medium">Fashion Store v.1</span>
+                          <span class="d-block fs-xs text-body-secondary">Hero promo slider</span>
+                          <div class="d-none d-lg-block hover-effect-target position-absolute top-0 start-100 bg-body border border-light-subtle rounded rounded-start-0 transition-none invisible opacity-0 pt-2 px-2 ms-n2" style="width: 212px; height: calc(100% + 2px); margin-top: -1px">
+                            <img class="position-relative z-2 d-none-dark" src="assets/img/mega-menu/demo-preview/fashion-1-light.jpg" alt="Fashion Store v.1">
+                            <img class="position-relative z-2 d-none d-block-dark" src="assets/img/mega-menu/demo-preview/fashion-1-dark.jpg" alt="Fashion Store v.1">
+                            <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none-dark" style="box-shadow: .875rem .5rem 2rem -.5rem #676f7b; opacity: .1"></span>
+                            <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none d-block-dark" style="box-shadow: .875rem .5rem 1.875rem -.5rem #080b12; opacity: .25"></span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="hover-effect-opacity px-2 mx-n2">
+                        <a class="dropdown-item d-block mb-0" href="home-fashion-v2.html">
+                          <span class="fw-medium">Fashion Store v.2</span>
+                          <span class="d-block fs-xs text-body-secondary">Hero banner with hotspots</span>
+                          <div class="d-none d-lg-block hover-effect-target position-absolute top-0 start-100 bg-body border border-light-subtle rounded rounded-start-0 transition-none invisible opacity-0 pt-2 px-2 ms-n2" style="width: 212px; height: calc(100% + 2px); margin-top: -1px">
+                            <img class="position-relative z-2 d-none-dark" src="assets/img/mega-menu/demo-preview/fashion-2-light.jpg" alt="Fashion Store v.2">
+                            <img class="position-relative z-2 d-none d-block-dark" src="assets/img/mega-menu/demo-preview/fashion-2-dark.jpg" alt="Fashion Store v.2">
+                            <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none-dark" style="box-shadow: .875rem .5rem 2rem -.5rem #676f7b; opacity: .1"></span>
+                            <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none d-block-dark" style="box-shadow: .875rem .5rem 1.875rem -.5rem #080b12; opacity: .25"></span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="hover-effect-opacity px-2 mx-n2">
+                        <a class="dropdown-item d-block mb-0" href="home-furniture.html">
+                          <span class="fw-medium">Furniture Store</span>
+                          <span class="d-block fs-xs text-body-secondary">Fancy product carousel</span>
+                          <div class="d-none d-lg-block hover-effect-target position-absolute top-0 start-100 bg-body border border-light-subtle rounded rounded-start-0 transition-none invisible opacity-0 pt-2 px-2 ms-n2" style="width: 212px; height: calc(100% + 2px); margin-top: -1px">
+                            <img class="position-relative z-2 d-none-dark" src="assets/img/mega-menu/demo-preview/furniture-light.jpg" alt="Furniture Store">
+                            <img class="position-relative z-2 d-none d-block-dark" src="assets/img/mega-menu/demo-preview/furniture-dark.jpg" alt="Furniture Store">
+                            <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none-dark" style="box-shadow: .875rem .5rem 2rem -.5rem #676f7b; opacity: .1"></span>
+                            <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none d-block-dark" style="box-shadow: .875rem .5rem 1.875rem -.5rem #080b12; opacity: .25"></span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="hover-effect-opacity px-2 mx-n2">
+                        <a class="dropdown-item d-block mb-0" href="home-grocery.html">
+                          <span class="fw-medium">Grocery Store</span>
+                          <span class="d-block fs-xs text-body-secondary">Hero slider + Category cards</span>
+                          <div class="d-none d-lg-block hover-effect-target position-absolute top-0 start-100 bg-body border border-light-subtle rounded rounded-start-0 transition-none invisible opacity-0 pt-2 px-2 ms-n2" style="width: 212px; height: calc(100% + 2px); margin-top: -1px">
+                            <img class="position-relative z-2 d-none-dark" src="assets/img/mega-menu/demo-preview/grocery-light.jpg" alt="Grocery Store">
+                            <img class="position-relative z-2 d-none d-block-dark" src="assets/img/mega-menu/demo-preview/grocery-dark.jpg" alt="Grocery Store">
+                            <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none-dark" style="box-shadow: .875rem .5rem 2rem -.5rem #676f7b; opacity: .1"></span>
+                            <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none d-block-dark" style="box-shadow: .875rem .5rem 1.875rem -.5rem #080b12; opacity: .25"></span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="hover-effect-opacity px-2 mx-n2">
+                        <a class="dropdown-item d-block mb-0" href="home-marketplace.html">
+                          <span class="fw-medium">Marketplace</span>
+                          <span class="d-block fs-xs text-body-secondary">Multi-vendor, digital goods</span>
+                          <div class="d-none d-lg-block hover-effect-target position-absolute top-0 start-100 bg-body border border-light-subtle rounded rounded-start-0 transition-none invisible opacity-0 pt-2 px-2 ms-n2" style="width: 212px; height: calc(100% + 2px); margin-top: -1px">
+                            <img class="position-relative z-2 d-none-dark" src="assets/img/mega-menu/demo-preview/marketplace-light.jpg" alt="Marketplace">
+                            <img class="position-relative z-2 d-none d-block-dark" src="assets/img/mega-menu/demo-preview/marketplace-dark.jpg" alt="Marketplace">
+                            <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none-dark" style="box-shadow: .875rem .5rem 2rem -.5rem #676f7b; opacity: .1"></span>
+                            <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none d-block-dark" style="box-shadow: .875rem .5rem 1.875rem -.5rem #080b12; opacity: .25"></span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="hover-effect-opacity px-2 mx-n2">
+                        <a class="dropdown-item d-block mb-0" href="home-single-store.html">
+                          <span class="fw-medium">Single Product Store</span>
+                          <span class="d-block fs-xs text-body-secondary">Single product / mono brand</span>
+                          <div class="d-none d-lg-block hover-effect-target position-absolute top-0 start-100 bg-body border border-light-subtle rounded rounded-start-0 transition-none invisible opacity-0 pt-2 px-2 ms-n2" style="width: 212px; height: calc(100% + 2px); margin-top: -1px">
+                            <img class="position-relative z-2 d-none-dark" src="assets/img/mega-menu/demo-preview/single-store-light.jpg" alt="Single Product Store">
+                            <img class="position-relative z-2 d-none d-block-dark" src="assets/img/mega-menu/demo-preview/single-store-dark.jpg" alt="Single Product Store">
+                            <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none-dark" style="box-shadow: .875rem .5rem 2rem -.5rem #676f7b; opacity: .1"></span>
+                            <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none d-block-dark" style="box-shadow: .875rem .5rem 1.875rem -.5rem #080b12; opacity: .25"></span>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown position-static pb-lg-2 me-lg-n1 me-xl-0">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Shop</a>
+                    <div class="dropdown-menu p-4" style="--cz-dropdown-spacer: .75rem">
+                      <div class="d-flex flex-column flex-lg-row gap-4">
+                        <div style="min-width: 190px">
+                          <div class="h6 mb-2">Electronics Store</div>
+                          <ul class="nav flex-column gap-2 mt-0">
+                            <li class="d-flex w-100 pt-1">
+                              <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-categories-electronics.html">Categories Page</a>
+                            </li>
+                            <li class="d-flex w-100 pt-1">
+                              <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Catalog with Side Filters</a>
+                            </li>
+                            <li class="d-flex w-100 pt-1">
+                              <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-product-general-electronics.html">Product General Info</a>
+                            </li>
+                            <li class="d-flex w-100 pt-1">
+                              <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-product-details-electronics.html">Product Details</a>
+                            </li>
+                            <li class="d-flex w-100 pt-1">
+                              <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-product-reviews-electronics.html">Product Reviews</a>
+                            </li>
+                          </ul>
+                          <div class="h6 pt-4 mb-2">Fashion Store</div>
+                          <ul class="nav flex-column gap-2 mt-0">
+                            <li class="d-flex w-100 pt-1">
+                              <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Catalog with Side Filters</a>
+                            </li>
+                            <li class="d-flex w-100 pt-1">
+                              <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-product-fashion.html">Product Page</a>
+                            </li>
+                          </ul>
+                          <div class="h6 pt-4 mb-2">Furniture Store</div>
+                          <ul class="nav flex-column gap-2 mt-0">
+                            <li class="d-flex w-100 pt-1">
+                              <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-furniture.html">Catalog with Top Filters</a>
+                            </li>
+                            <li class="d-flex w-100 pt-1">
+                              <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-product-furniture.html">Product Page</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div style="min-width: 190px">
+                          <div class="h6 mb-2">Grocery Store</div>
+                          <ul class="nav flex-column gap-2 mt-0">
+                            <li class="d-flex w-100 pt-1">
+                              <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-grocery.html">Catalog with Side Filters</a>
+                            </li>
+                            <li class="d-flex w-100 pt-1">
+                              <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-product-grocery.html">Product Page</a>
+                            </li>
+                          </ul>
+                          <div class="h6 pt-4 mb-2">Marketplace</div>
+                          <ul class="nav flex-column gap-2 mt-0">
+                            <li class="d-flex w-100 pt-1">
+                              <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-marketplace.html">Catalog with Top Filters</a>
+                            </li>
+                            <li class="d-flex w-100 pt-1">
+                              <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-product-marketplace.html">Digital Product Page</a>
+                            </li>
+                            <li class="d-flex w-100 pt-1">
+                              <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="checkout-marketplace.html">Cart / Checkout</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div style="min-width: 190px">
+                          <div class="h6 mb-2">Checkout v.1</div>
+                          <ul class="nav flex-column gap-2 mt-0">
+                            <li class="d-flex w-100 pt-1">
+                              <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="checkout-v1-cart.html">Shopping Cart</a>
+                            </li>
+                            <li class="d-flex w-100 pt-1">
+                              <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="checkout-v1-delivery-1.html">Delivery Info (Step 1)</a>
+                            </li>
+                            <li class="d-flex w-100 pt-1">
+                              <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="checkout-v1-delivery-2.html">Delivery Info (Step 2)</a>
+                            </li>
+                            <li class="d-flex w-100 pt-1">
+                              <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="checkout-v1-shipping.html">Shipping Address</a>
+                            </li>
+                            <li class="d-flex w-100 pt-1">
+                              <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="checkout-v1-payment.html">Payment</a>
+                            </li>
+                            <li class="d-flex w-100 pt-1">
+                              <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="checkout-v1-thankyou.html">Thank You Page</a>
+                            </li>
+                          </ul>
+                          <div class="h6 pt-4 mb-2">Checkout v.2</div>
+                          <ul class="nav flex-column gap-2 mt-0">
+                            <li class="d-flex w-100 pt-1">
+                              <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="checkout-v2-cart.html">Shopping Cart</a>
+                            </li>
+                            <li class="d-flex w-100 pt-1">
+                              <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="checkout-v2-delivery.html">Delivery Info</a>
+                            </li>
+                            <li class="d-flex w-100 pt-1">
+                              <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="checkout-v2-pickup.html">Pickup from Store</a>
+                            </li>
+                            <li class="d-flex w-100 pt-1">
+                              <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="checkout-v2-thankyou.html">Thank You Page</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown pb-lg-2 me-lg-n1 me-xl-0">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" data-bs-auto-close="outside" aria-expanded="false">Account</a>
+                    <ul class="dropdown-menu" style="--cz-dropdown-spacer: .75rem">
+                      <li class="dropend">
+                        <a class="dropdown-item dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Auth Pages</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="account-signin.html">Sign In</a></li>
+                          <li><a class="dropdown-item" href="account-signup.html">Sign Up</a></li>
+                          <li><a class="dropdown-item" href="account-password-recovery.html">Password Recovery</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropend">
+                        <a class="dropdown-item dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Shop User</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="account-orders.html">Orders History</a></li>
+                          <li><a class="dropdown-item" href="account-wishlist.html">Wishlist</a></li>
+                          <li><a class="dropdown-item" href="account-payment.html">Payment Methods</a></li>
+                          <li><a class="dropdown-item" href="account-reviews.html">My Reviews</a></li>
+                          <li><a class="dropdown-item" href="account-info.html">Personal Info</a></li>
+                          <li><a class="dropdown-item" href="account-addresses.html">Addresses</a></li>
+                          <li><a class="dropdown-item" href="account-notifications.html">Notifications</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropend">
+                        <a class="dropdown-item dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Marketplace User</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="account-marketplace-dashboard.html">Dashboard</a></li>
+                          <li><a class="dropdown-item" href="account-marketplace-products.html">Products</a></li>
+                          <li><a class="dropdown-item" href="account-marketplace-sales.html">Sales</a></li>
+                          <li><a class="dropdown-item" href="account-marketplace-payouts.html">Payouts</a></li>
+                          <li><a class="dropdown-item" href="account-marketplace-purchases.html">Purchases</a></li>
+                          <li><a class="dropdown-item" href="account-marketplace-favorites.html">Favorites</a></li>
+                          <li><a class="dropdown-item" href="account-marketplace-settings.html">Settings</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown pb-lg-2 me-lg-n1 me-xl-0">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" data-bs-auto-close="outside" aria-expanded="false">Pages</a>
+                    <ul class="dropdown-menu" style="--cz-dropdown-spacer: .75rem">
+                      <li class="dropend">
+                        <a class="dropdown-item dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">About</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="about-v1.html">About v.1</a></li>
+                          <li><a class="dropdown-item" href="about-v2.html">About v.2</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropend">
+                        <a class="dropdown-item dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Blog</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="blog-grid-v1.html">Grid View v.1</a></li>
+                          <li><a class="dropdown-item" href="blog-grid-v2.html">Grid View v.2</a></li>
+                          <li><a class="dropdown-item" href="blog-list.html">List View</a></li>
+                          <li><a class="dropdown-item" href="blog-single-v1.html">Single Post v.1</a></li>
+                          <li><a class="dropdown-item" href="blog-single-v2.html">Single Post v.2</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropend">
+                        <a class="dropdown-item dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Contact</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="contact-v1.html">Contact v.1</a></li>
+                          <li><a class="dropdown-item" href="contact-v2.html">Contact v.2</a></li>
+                          <li><a class="dropdown-item" href="contact-v3.html">Contact v.3</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropend">
+                        <a class="dropdown-item dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Help Center</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="help-topics-v1.html">Help Topics v.1</a></li>
+                          <li><a class="dropdown-item" href="help-topics-v2.html">Help Topics v.2</a></li>
+                          <li><a class="dropdown-item" href="help-single-article-v1.html">Help Single Article v.1</a></li>
+                          <li><a class="dropdown-item" href="help-single-article-v2.html">Help Single Article v.2</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropend">
+                        <a class="dropdown-item dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">404 Error</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="404-electronics.html">404 Electronics</a></li>
+                          <li><a class="dropdown-item" href="404-fashion.html">404 Fashion</a></li>
+                          <li><a class="dropdown-item" href="404-furniture.html">404 Furniture</a></li>
+                          <li><a class="dropdown-item" href="404-grocery.html">404 Grocery</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item" href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item pb-lg-2 me-lg-n2 me-xl-0">
+                    <a class="nav-link" href="docs/installation.html">Docs</a>
+                  </li>
+                  <li class="nav-item pb-lg-2 me-lg-n2 me-xl-0">
+                    <a class="nav-link" href="docs/typography.html">Components</a>
+                  </li>
+                </ul>
+
+                <!-- Search toggle visible on screens > 991px wide (lg breakpoint) -->
+                <button type="button" class="btn btn-outline-secondary justify-content-start w-100 px-3 mb-lg-2 ms-3 d-none d-lg-inline-flex" style="max-width: 240px" data-bs-toggle="offcanvas" data-bs-target="#searchBox" aria-controls="searchBox">
+                  <i class="ci-search fs-base ms-n1 me-2"></i>
+                  <span class="text-body-tertiary fw-normal">Search</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Account and Wishlist buttons visible on screens < 768px wide (md breakpoint) -->
+          <div class="offcanvas-header border-top px-0 py-3 mt-3 d-md-none">
+            <div class="nav nav-justified w-100">
+              <a class="nav-link border-end" href="account-signin.html">
+                <i class="ci-user fs-lg opacity-60 me-2"></i>
+                Account
+              </a>
+              <a class="nav-link" href="#!">
+                <i class="ci-heart fs-lg opacity-60 me-2"></i>
+                Wishlist
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+
+    <!-- Page content -->
+    <main class="content-wrapper">
+
+      <!-- Hero slider -->
+      <section class="position-relative overflow-hidden">
+      
+        <!-- Background Video -->
+        <video class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" autoplay muted loop playsinline>
+          <source src="assets/img/home/bg-clip.mp4" type="video/mp4">
+        </video>
+      
+        <div class="container position-relative">
+          <div class="row justify-content-between align-items-center min-vh-100">
+      
+            <!-- Text -->
+            <div class="col-lg-5 text-white text-start order-2 order-lg-1 mb-4 mb-lg-0">
+              <p class="fw-bold fs-xs mb-0">FULL-SPECTRUM LIVE EXTRACT</p>
+              <p class="fw-bold fs-xs mb-2">HTE + NATURAL AROMATIC VOLATILES</p>
+      
+              <h1 class="display-4 text-white mb-4">
+                Headstash
+              </h1>
+              <p class="mb-5 fw-bold">
+                Louder than live extract. Richer than full-spectrum. Headstash revives what time, heat, and processing take away to
+                restore canna flavor to its truest form.
+              </p>
+      
+              <a class="btn btn-md btn-info rounded-pill py-3 px-5" href="#">
+                Explore Headstash
+              </a>
+            </div>
+      
+            <!-- Image in front -->
+            <div class="col-lg-7 text-center order-1 order-lg-2 mb-4 mb-lg-0">
+              <img src="assets/img/home/terpenes.webp" class="img-fluid" alt="Banner Image">
+            </div>
+      
+          </div>
+        </div>
+      
+      </section>
+
+      <!-- Testimonials -->
+      <section class="position-relative overflow-hidden"
+        style="background-image: url('assets/img/home/testimonial-background.webp'); background-size: cover; background-position: center;">
+      
+        <div class="position-relative">
+          <div class="row align-items-center justify-content-center py-5">
+      
+            <div class="col-12 col-lg-10 text-center text-white">
+      
+              <h1 class="px-3 mb-5 fw-bold text-white text-start display-5">
+                The World's Favorite Canna Brands Are Weighing in on Headstash
+              </h1>
+      
+              <div class="d-flex flex-column align-items-center gap-4 px-4 mb-5">
+                <!-- appears SECOND -->
+                <img src="assets/img/home/testimonial-2.webp" alt="By far the most impactful input we've tried."
+                  class="img-fluid fade-in-img delay-2 testimonial-two">
+      
+                <!-- appears FIRST -->
+                <img src="assets/img/home/testimonial-1.webp" alt="Headstash is paradigm-shifting."
+                  class="img-fluid fade-in-img delay-1 testimonial-one">
+      
+                <!-- appears LAST -->
+                <img src="assets/img/home/testimonial-3.webp"
+                  alt="The richest, deepest experience I've had from a canna v*pe."
+                  class="img-fluid fade-in-img delay-3 testimonial-three">
+              </div>
+      
+              <a class="btn btn-outline-light rounded-pill py-3 px-5" href="#">
+                Experience Headstash for Yourself
+              </a>
+      
+            </div>
+          </div>
+        </div>
+      
+      </section>
+
+      <!-- Featured products -->
+      <section class="py-5 mb-2 mb-sm-3 mb-lg-4 mb-xl-5 bg-dark">
+        <div class="container px-4">
+          <div class="mb-5 px-3">
+            <h1 class="text-white fw-bold pt-4">The Most Powerful Input for Canna Flavor</h1>
+            <p class="text-white">
+              Incredible on their own. Mind-blowing when blended with other strains. Target virtually any strain profile with
+              Headstash bases.
+            </p>
+          </div>
+          
+          <div class="row row-cols-1 row-cols-lg-3 justify-content-center gy-4 gy-md-5 gx-4 px-lg-5">
+          
+            <div class="col">
+              <div class="text-start">
+                <a class="d-block mb-3" href="#">
+                  <img src="assets/img/home/haze.webp" alt="Haze" class="img-fluid w-100">
+                </a>
+                <h4 class="text-white fw-bold mb-2">Haze</h4>
+                <p class="text-white fs-sm mb-3">
+                  Unforgettably bright. Target every trending Haze profile, from SLH to Blue Dream.
+                </p>
+                <a href="#" class="text-info text-decoration-none fw-medium">
+                  View Now &rarr;
+                </a>
+              </div>
+            </div>
+          
+            <div class="col">
+              <div class="text-start">
+                <a class="d-block mb-3" href="#">
+                  <img src="assets/img/home/kush.webp" alt="Kush" class="img-fluid w-100">
+                </a>
+                <h4 class="text-white fw-bold mb-2">Kush</h4>
+                <p class="text-white fs-sm mb-3">
+                  That fresh jar appeal. Unlock any strain in the Kush lineage.
+                </p>
+                <a href="#" class="text-info text-decoration-none fw-medium">
+                  View Now &rarr;
+                </a>
+              </div>
+            </div>
+          
+            <div class="col">
+              <div class="text-start">
+                <a class="d-block mb-3" href="#">
+                  <img src="assets/img/home/sour-diesel.webp" alt="Sour Diesel" class="img-fluid w-100">
+                </a>
+                <h4 class="text-white fw-bold mb-2">Sour Diesel</h4>
+                <p class="text-white fs-sm mb-3">
+                  Perfectly sour & repulsive. Throw it back with fuel-forward funk for diesel lovers.
+                </p>
+                <a href="#" class="text-info text-decoration-none fw-medium">
+                  View Now &rarr;
+                </a>
+              </div>
+            </div>
+          
+            <div class="col">
+              <div class="text-start">
+                <a class="d-block mb-3" href="#">
+                  <img src="assets/img/home/gelato.webp" alt="Gelato" class="img-fluid w-100">
+                </a>
+                <h4 class="text-white fw-bold mb-2">Gelato</h4>
+                <p class="text-white fs-sm mb-3">
+                  Complex, sweet, & tasty. Tap into Gelato's iconic legacy.
+                </p>
+                <a href="#" class="text-info text-decoration-none fw-medium">
+                  View Now &rarr;
+                </a>
+              </div>
+            </div>
+          
+            <div class="col">
+              <div class="text-start">
+                <a class="d-block mb-3" href="#">
+                  <img src="assets/img/home/purp.webp" alt="Purp" class="img-fluid w-100">
+                </a>
+                <h4 class="text-white fw-bold mb-2">Purp</h4>
+                <p class="text-white fs-sm mb-3">
+                  Dank with a jammy sweetness. Who doesn't love a purp profile?
+                </p>
+                <a href="#" class="text-info text-decoration-none fw-medium">
+                  View Now &rarr;
+                </a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Access -->
+      <section class="container py-5">
+      
+        <h2 class="text-center fw-bold mb-5">Quick Access</h2>
+      
+        <div class="row text-center g-4">
+      
+          <!-- Item -->
+          <div class="col-4 col-xl-2">
+            <a class="text-decoration-none text-dark" href="#">
+              <div class="mb-2">
+                <img src="assets/icons/business-samples.svg" width="60" alt="Business Samples">
+              </div>
+              <span class="fw-bold fs-sm d-none d-md-block">Business&nbsp;Samples&nbsp;→</span>
+              <span class="fw-bold fs-xs d-block d-md-none">Business&nbsp;Samples&nbsp;→</span>
+            </a>
+          </div>
+      
+          <!-- Item -->
+          <div class="col-4 col-xl-2">
+            <a class="text-decoration-none text-dark" href="#">
+              <div class="mb-2">
+                <img src="assets/icons/bulk-pricing.svg" width="60" alt="Bulk Pricing">
+              </div>
+              <span class="fw-bold fs-sm d-none d-md-block">Bulk Pricing&nbsp;→</span>
+              <span class="fw-bold fs-xs d-block d-md-none">Bulk Pricing&nbsp;→</span>
+            </a>
+          </div>
+      
+          <!-- Item -->
+          <div class="col-4 col-xl-2">
+            <a class="text-decoration-none text-dark" href="#">
+              <div class="mb-2">
+                <img src="assets/icons/quick-order.svg" width="60" alt="Quick Order">
+              </div>
+              <span class="fw-bold fs-sm d-none d-md-block">Quick Order&nbsp;→</span>
+              <span class="fw-bold fs-xs d-block d-md-none">Quick Order&nbsp;→</span>
+            </a>
+          </div>
+      
+          <!-- Item -->
+          <div class="col-4 col-xl-2">
+            <a class="text-decoration-none text-dark" href="#">
+              <div class="mb-2">
+                <img src="assets/icons/coas-&-docs.svg" width="60" alt="COAs & Docs">
+              </div>
+              <span class="fw-bold fs-sm d-none d-md-block">COAs & Docs&nbsp;→</span>
+              <span class="fw-bold fs-xs d-block d-md-none">COAs & Docs&nbsp;→</span>
+            </a>
+          </div>
+      
+          <!-- Item -->
+          <div class="col-4 col-xl-2">
+            <a class="text-decoration-none text-dark" href="#">
+              <div class="mb-2">
+                <img src="assets/icons/applications.svg" width="60" alt="Applications">
+              </div>
+              <span class="fw-bold fs-sm d-none d-md-block">Applications&nbsp;→</span>
+              <span class="fw-bold fs-xs d-block d-md-none">Applications&nbsp;→</span>
+            </a>
+          </div>
+      
+          <!-- Item -->
+          <div class="col-4 col-xl-2">
+            <a class="text-decoration-none text-dark" href="#">
+              <div class="mb-2">
+                <img src="assets/icons/quality-&-safety.svg" width="60" alt="Quality & Safety">
+              </div>
+              <span class="fw-bold fs-sm d-none d-md-block">Quality & Safety&nbsp;→</span>
+              <span class="fw-bold fs-xs d-block d-md-none">Quality & Safety&nbsp;→</span>
+            </a>
+          </div>
+      
+        </div>
+      
+      </section>
+
+
+      <!-- About Product -->
+      <section class="mx-4 mx-lg-5 py-5 mb-4">
+        <div class="row align-items-center">
+      
+          <!-- Left Content -->
+          <div class="col-lg-5 order-lg-1 order-2 mb-4 mb-lg-0">
+            <p class="text-uppercase fs-sm text-dark mb-4">Introducing Modifiers</p>
+      
+          <h1 class="fw-bold mb-3">
+            Make strains
+            <span id="fade-word" style="opacity: 0;"></span>
+          </h1>
+      
+            <p class="fs-sm text-dark my-4">
+              Take flavor to full-on experience. Add Modifiers to any Strain or Flavor
+              to take your products to the next level and double your SKUs with one bottle.
+            </p>
+      
+            <a href="#" class="btn btn-info px-4 py-3 rounded-pill">
+              Shop Now
+            </a>
+          </div>
+      
+          <!-- Right Product Images -->
+          <div class="col-lg-7 text-center order-lg-2 order-1 mb-4 mb-lg-0">
+              <img src="assets/img/home/bottles.webp" class="img-fluid" alt="Ice Modifier">
+          </div>
+      
+        </div>
+      </section>
+
+
+      <!--Product carousel -->
+      <section class="mx-4 mx-lg-5 pt-2 pt-sm-3 pt-md-4 pt-lg-5 pb-5 my-xxl-3">
+      
+        <div class="d-flex align-items-center justify-content-between gap-4 pt-5 pb-3 mb-1 mb-sm-2 mb-md-3">
+          <h2 class="h2 fw-bold mb-0">Trending Terpene Strains, Flavors, & Modifiers</h2>
+      
+          <div class="d-md-flex d-none gap-2">
+            <button type="button" class="btn btn-icon btn-outline-secondary bg-body rounded-circle me-1"
+              id="prod-prev" aria-label="Prev">
+              <i class="ci-chevron-left fs-lg"></i>
+            </button>
+            <button type="button" class="btn btn-icon btn-outline-secondary bg-body rounded-circle"
+              id="prod-next" aria-label="Next">
+              <i class="ci-chevron-right fs-lg"></i>
+            </button>
+          </div>
+        </div>
+      
+        <div class="swiper" data-swiper='{
+          "slidesPerView": 2,
+          "spaceBetween": 24,
+          "navigation": {
+            "prevEl": "#prod-prev",
+            "nextEl": "#prod-next"
+          },
+          "breakpoints": {
+            "768": { "slidesPerView": 3 },
+            "1024": { "slidesPerView": 4 }
+          }
+        }'>
+          <div class="swiper-wrapper">
+      
+            <div class="swiper-slide">
+              <div class="border-0">
+                <div class="mb-3 bg-light d-flex align-items-center justify-content-center"
+                  style="background-color: #f1f1f1 !important; aspect-ratio: 1/1;">
+                  <a class="d-block w-100 h-100" href="#">
+                    <img src="assets/img/home/modifiers.webp" alt="Modifiers"
+                      class="w-100 h-100 object-fit-cover">
+                  </a>
+                </div>
+                <div>
+                  <h3 class="h5 mb-1">Modifiers</h3>
+                  <p class="text-dark fs-sm mb-3">Ice, Skunk, & Sweet</p>
+                  <a href="#"
+                    class="text-primary fw-semibold text-decoration-none fs-sm d-inline-flex align-items-center gap-1 hover-effect-underline">
+                    Shop Now &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+      
+            <div class="swiper-slide">
+              <div class="border-0">
+                <div class="mb-3 bg-light d-flex align-items-center justify-content-center"
+                  style="background-color: #f1f1f1 !important; aspect-ratio: 1/1;">
+                  <a class="d-block w-100 h-100" href="#">
+                    <img src="assets/img/home/infused-strains.webp" alt="Infused Strains"
+                      class="w-100 h-100 object-fit-cover">
+                  </a>
+                </div>
+                <div>
+                  <h3 class="h5 mb-1">Infused Strains</h3>
+                  <p class="text-dark fs-sm mb-3">Flavor Infused botanical strain profiles</p>
+                  <a href="#"
+                    class="text-primary fw-semibold text-decoration-none fs-sm d-inline-flex align-items-center gap-1 hover-effect-underline">
+                    Shop Now &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+      
+            <div class="swiper-slide">
+              <div class="border-0">
+                <div class="mb-3 bg-light d-flex align-items-center justify-content-center"
+                  style="background-color: #f1f1f1 !important; aspect-ratio: 1/1;">
+                  <a class="d-block w-100 h-100" href="#">
+                    <img src="assets/img/home/cultivar-series.webp" alt="Cultivar Series"
+                      class="w-100 h-100 object-fit-cover">
+                  </a>
+                </div>
+                <div>
+                  <h3 class="h5 mb-1">Cultivar Series</h3>
+                  <p class="text-dark fs-sm mb-3">High fidelity terpene strains</p>
+                  <a href="#"
+                    class="text-primary fw-semibold text-decoration-none fs-sm d-inline-flex align-items-center gap-1 hover-effect-underline">
+                    Shop Now &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+      
+            <div class="swiper-slide">
+              <div class="border-0">
+                <div class="mb-3 bg-light d-flex align-items-center justify-content-center"
+                  style="background-color: #f1f1f1 !important; aspect-ratio: 1/1;">
+                  <a class="d-block w-100 h-100" href="#">
+                    <img src="assets/img/home/flavors.webp" alt="Flavors" class="w-100 h-100 object-fit-cover">
+                  </a>
+                </div>
+                <div>
+                  <h3 class="h5 mb-1">Flavors</h3>
+                  <p class="text-dark fs-sm mb-3">Bold, trending terpene flavors</p>
+                  <a href="#"
+                    class="text-primary fw-semibold text-decoration-none fs-sm d-inline-flex align-items-center gap-1 hover-effect-underline">
+                    Shop Now &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="border-0">
+                <div class="mb-3 bg-light d-flex align-items-center justify-content-center"
+                  style="background-color: #f1f1f1 !important; aspect-ratio: 1/1;">
+                  <a class="d-block w-100 h-100" href="#">
+                    <img src="assets/img/home/flow.webp" alt="Flow" class="w-100 h-100 object-fit-cover">
+                  </a>
+                </div>
+                <div>
+                  <h3 class="h5 mb-1">Flow</h3>
+                  <p class="text-dark fs-sm mb-3">All Natural extract liquidizer</p>
+                  <a href="#"
+                    class="text-primary fw-semibold text-decoration-none fs-sm d-inline-flex align-items-center gap-1 hover-effect-underline">
+                    Shop Now &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="border-0">
+                <div class="mb-3 bg-light d-flex align-items-center justify-content-center"
+                  style="background-color: #f1f1f1 !important; aspect-ratio: 1/1;">
+                  <a class="d-block w-100 h-100" href="#">
+                    <img src="assets/img/home/live-alchemy.webp" alt="Live Alchemy" class="w-100 h-100 object-fit-cover">
+                  </a>
+                </div>
+                <div>
+                  <h3 class="h5 mb-1">Live Alchemy</h3>
+                  <p class="text-dark fs-sm mb-3">Hemp + botanical terpenes</p>
+                  <a href="#"
+                    class="text-primary fw-semibold text-decoration-none fs-sm d-inline-flex align-items-center gap-1 hover-effect-underline">
+                    Shop Now &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="border-0">
+                <div class="mb-3 bg-light d-flex align-items-center justify-content-center"
+                  style="background-color: #f1f1f1 !important; aspect-ratio: 1/1;">
+                  <a class="d-block w-100 h-100" href="#">
+                    <img src="assets/img/home/terpology.webp" alt="Terpology" class="w-100 h-100 object-fit-cover">
+                  </a>
+                </div>
+                <div>
+                  <h3 class="h5 mb-1">Terpology</h3>
+                  <p class="text-dark fs-sm mb-3">Effects blends by Dr. Ethan Russo</p>
+                  <a href="#"
+                    class="text-primary fw-semibold text-decoration-none fs-sm d-inline-flex align-items-center gap-1 hover-effect-underline">
+                    Shop Now &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+
+      <!--product banner-->
+      <section class="position-relative text-center text-white overflow-hidden"
+        style="background:url('assets/img/home/market-trends-bg-mobile.webp') center/cover no-repeat; min-height:600px;">
+      
+        <!-- Desktop background -->
+        <div class="d-none d-lg-block position-absolute top-0 start-0 w-100 h-100"
+          style="background:url('assets/img/home/market-trends-bg.webp') center/cover no-repeat;"></div>
+      
+        <!-- Desktop left image -->
+        <img src="assets/img/home/market-trends-left.webp"
+          class="position-absolute bottom-0 start-0 img-fluid d-none d-lg-block" style="max-height:600px;">
+      
+        <!-- Desktop right image -->
+        <img src="assets/img/home/market-trends-right.webp"
+          class="position-absolute bottom-0 end-0 img-fluid d-none d-lg-block" style="max-height:600px;">
+      
+        <!-- DESKTOP CONTENT -->
+        <div class="container position-relative min-vh-100 d-none d-lg-flex align-items-center justify-content-center">
+          <div class="row justify-content-center w-100">
+            <div class="col-lg-7 text-center">
+        
+              <h1 class="fw-bold display-5 mb-3 text-white">
+                FLAVORS THAT SHAPE <br> MARKET TRENDS
+              </h1>
+        
+              <p class="fs-lg mb-4 text-white">
+                Insights powered by $8 billion in consumer products sold each year.
+              </p>
+        
+              <a href="#" class="btn btn-info btn-lg rounded-pill px-4">
+                Shop Now
+              </a>
+        
+            </div>
+          </div>
+        </div>
+        
+        
+        <!-- MOBILE CONTENT -->
+        <div class="d-flex d-lg-none align-items-center justify-content-center text-center">
+          <div class="row justify-content-center">
+            <div class="col-12">
+        
+              <h2 class="text-white mt-5 pt-4">
+                FLAVORS THAT SHAPE MARKET<br> TRENDS
+              </h2>
+        
+              <p class="text-white pt-2 px-2">
+                Insights powered by $8 <br> billion in consumer <br> products sold each year.
+              </p>
+        
+              <a href="#" class="btn btn-info btn-md rounded-pill px-3 mt-3">
+                Shop Now
+              </a>
+        
+            </div>
+          </div>
+        </div>
+      
+      </section>
+
+
+      <!-- Sample Bottles -->
+      <section class="pt-5 pb-4 mt-4" style="background-image: url(assets/img/home/sample-bottle-bg.png);">
+        <div class="mx-4 mx-lg-5 row align-items-center justify-content-between">
+      
+          <!-- Bottles Image -->
+          <div class="col-md-5 text-center mb-4 mb-md-0">
+            <img src="assets/img/home/sample-bottle.webp" class="img-fluid" alt="Terpene bottles">
+          </div>
+      
+          <!-- Content -->
+          <div class="col-md-6">
+      
+            <h2 class="fw-bold mb-3">
+              Terpene samples to scale your business.
+            </h2>
+      
+            <p class="text-dark mb-4">
+              Request terpene samples for your business and see why we're the world's
+              most trusted terpene supplier for bold, authentic flavors and
+              consistent products.
+            </p>
+      
+            <a href="#" class="btn btn-info btn-md rounded-pill px-4 py-3">
+              Request Samples
+            </a>
+      
+          </div>
+      
+        </div>
+      </section>
+
+      <!--Bundle and Save-->
+      <section class="container-fluid p-0">
+        <div class="row g-0">
+      
+          <!-- LEFT SIDE -->
+          <div class="col-lg-7 text-white d-flex align-items-center"
+            style="background:url('assets/img/home/cta-banner.jpg') center/cover no-repeat; min-height:520px;">
+      
+            <div class="container ms-lg-5 px-5">
+              <h1 class="fw-bold mb-4 text-white d-lg-block d-none">
+                Ready to start ordering <br> wholesale?
+              </h1>
+              <h2 class="fw-bold mb-4 text-white d-lg-none d-block">
+                Ready to start <br> ordering wholesale?
+              </h2>
+      
+              <p class="mb-4 fs-sm">
+                If you're ready to scale, start saving money with wholesale discounts
+                and pricing on the terpenes you need to grow your business.
+              </p>
+              <div class="text-center text-lg-start">
+                <a href="#" class="btn btn-info btn-md rounded-pill px-4 py-3">
+                  Start Saving
+                </a>
+              </div>
+              
+            </div>
+      
+          </div>
+      
+      
+          <!-- RIGHT SIDE -->
+          <div class="col-lg-5 d-flex align-items-center text-white" style="background:#0e61fe; min-height:520px;">
+      
+            <div class="container p-5">
+      
+              <img src="assets/img/home/bundle-save.svg" width="400" alt="Bundle & Save" class="img-fluid mb-3">
+      
+              <p class="mb-4">
+                Buy More, Save More. All Sizes. Every Day. <br>
+                Bundle any same size, full price products to save.
+              </p>
+      
+              <!-- Offers -->
+              <div class="row g-3 mb-4">
+      
+                <div class="col-md-6">
+                  <div class="border p-4 text-center">
+                    <strong>Buy 5 get 1 FREE</strong><br>
+                    Add 6 to Cart
+                  </div>
+                </div>
+      
+                <div class="col-md-6">
+                  <div class="border p-4 text-center">
+                    <strong>Buy 10 get 3 FREE</strong><br>
+                    Add 13 to Cart
+                  </div>
+                </div>
+      
+              </div>
+      
+              <p class="mb-4">
+                Discount automatically applied at checkout.
+              </p>
+      
+              <a href="#" class="btn btn-light text-info rounded-pill px-4 py-3 mb-3">
+                Learn More
+              </a>
+      
+              <p class="fs-xs mb-0">
+                Not valid on the purchase of Isolates. Cannot be stacked or combined with other discounts.
+              </p>
+      
+            </div>
+      
+          </div>
+      
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Page footer -->
+    <footer class="footer pt-5 pb-4">
+      <div class="container pt-sm-2 pt-md-3 pt-lg-4">
+        <div class="row pb-5 mb-lg-3">
+
+          <!-- Columns with links that are turned into accordion on screens < 500px wide (sm breakpoint) -->
+          <div class="col-md-8 col-xl-7 pb-2 pb-md-0 mb-4 mb-md-0 mt-n3 mt-sm-0">
+            <div class="accordion" id="footerLinks">
+              <div class="row row-cols-1 row-cols-sm-3">
+                <div class="accordion-item col border-0">
+                  <h6 class="accordion-header" id="categoriesHeading">
+                    <span class="text-dark-emphasis d-none d-sm-block">Categories</span>
+                    <button type="button" class="accordion-button collapsed py-3 d-sm-none" data-bs-toggle="collapse" data-bs-target="#categoriesLinks" aria-expanded="false" aria-controls="categoriesLinks">Categories</button>
+                  </h6>
+                  <div class="accordion-collapse collapse d-sm-block" id="categoriesLinks" aria-labelledby="categoriesHeading" data-bs-parent="#footerLinks">
+                    <ul class="nav flex-column gap-2 pt-sm-3 pb-3 pb-sm-0 mt-n1 mb-1 mb-sm-0">
+                      <li class="d-flex w-100 pt-1">
+                        <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="#!">For women</a>
+                      </li>
+                      <li class="d-flex w-100 pt-1">
+                        <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="#!">For men</a>
+                      </li>
+                      <li class="d-flex w-100 pt-1">
+                        <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="#!">Home clothes</a>
+                      </li>
+                      <li class="d-flex w-100 pt-1">
+                        <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="#!">Accessories</a>
+                      </li>
+                      <li class="d-flex w-100 pt-1">
+                        <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="#!">Sale</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <hr class="d-sm-none my-0">
+                </div>
+                <div class="accordion-item col border-0">
+                  <h6 class="accordion-header" id="accountHeading">
+                    <span class="text-dark-emphasis d-none d-sm-block">Account</span>
+                    <button type="button" class="accordion-button collapsed py-3 d-sm-none" data-bs-toggle="collapse" data-bs-target="#accountLinks" aria-expanded="false" aria-controls="accountLinks">Account</button>
+                  </h6>
+                  <div class="accordion-collapse collapse d-sm-block" id="accountLinks" aria-labelledby="accountHeading" data-bs-parent="#footerLinks">
+                    <ul class="nav flex-column gap-2 pt-sm-3 pb-3 pb-sm-0 mt-n1 mb-1 mb-sm-0">
+                      <li class="d-flex w-100 pt-1">
+                        <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="#!">Your account</a>
+                      </li>
+                      <li class="d-flex w-100 pt-1">
+                        <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="#!">Shipping &amp; policies</a>
+                      </li>
+                      <li class="d-flex w-100 pt-1">
+                        <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="#!">Refunds &amp; replacements</a>
+                      </li>
+                      <li class="d-flex w-100 pt-1">
+                        <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="#!">Order tracking</a>
+                      </li>
+                      <li class="d-flex w-100 pt-1">
+                        <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="#!">Delivery info</a>
+                      </li>
+                      <li class="d-flex w-100 pt-1">
+                        <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="#!">Taxes &amp; fees</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <hr class="d-sm-none my-0">
+                </div>
+                <div class="accordion-item col border-0">
+                  <h6 class="accordion-header" id="customerHeading">
+                    <span class="text-dark-emphasis d-none d-sm-block">Customer service</span>
+                    <button type="button" class="accordion-button collapsed py-3 d-sm-none" data-bs-toggle="collapse" data-bs-target="#customerLinks" aria-expanded="false" aria-controls="customerLinks">Customer service</button>
+                  </h6>
+                  <div class="accordion-collapse collapse d-sm-block" id="customerLinks" aria-labelledby="customerHeading" data-bs-parent="#footerLinks">
+                    <ul class="nav flex-column gap-2 pt-sm-3 pb-3 pb-sm-0 mt-n1 mb-1 mb-sm-0">
+                      <li class="d-flex w-100 pt-1">
+                        <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="#!">Payment methods</a>
+                      </li>
+                      <li class="d-flex w-100 pt-1">
+                        <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="#!">Money back guarantee</a>
+                      </li>
+                      <li class="d-flex w-100 pt-1">
+                        <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="#!">Refunds &amp; replacements</a>
+                      </li>
+                      <li class="d-flex w-100 pt-1">
+                        <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="#!">Product returns</a>
+                      </li>
+                      <li class="d-flex w-100 pt-1">
+                        <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="#!">Support center</a>
+                      </li>
+                      <li class="d-flex w-100 pt-1">
+                        <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="#!">Shipping</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <hr class="d-sm-none my-0">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Subscription -->
+          <div class="col-md-4 offset-xl-1">
+            <h6 class="mb-4">Join us and stay up to date</h6>
+            <form class="needs-validation" novalidate>
+              <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" id="check-woman" checked>
+                <label for="check-woman" class="form-check-label">Woman</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" id="check-man">
+                <label for="check-man" class="form-check-label">Man</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" id="check-sale">
+                <label for="check-sale" class="form-check-label">Sale</label>
+              </div>
+              <div class="position-relative mt-3">
+                <input type="email" class="form-control form-control-lg bg-image-none text-start" placeholder="Enter email" aria-label="Your email address" required>
+                <div class="invalid-tooltip bg-transparent p-0">Please enter you email address!</div>
+                <button type="submit" class="btn btn-icon btn-ghost fs-xl btn-secondary border-0 position-absolute top-0 end-0 mt-1 me-1" aria-label="Submit your email address">
+                  <i class="ci-arrow-up-right"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Social account links -->
+        <div class="d-flex justify-content-center justify-content-lg-start gap-2 mt-n2 mt-md-0">
+          <a class="btn btn-icon fs-base btn-outline-secondary border-0" href="#!" data-bs-toggle="tooltip" data-bs-template='<div class="tooltip fs-xs mb-n2" role="tooltip"><div class="tooltip-inner bg-transparent text-body p-0"></div></div>' title="YouTube" aria-label="Follow us on YouTube">
+            <i class="ci-youtube"></i>
+          </a>
+          <a class="btn btn-icon fs-base btn-outline-secondary border-0" href="#!" data-bs-toggle="tooltip" data-bs-template='<div class="tooltip fs-xs mb-n2" role="tooltip"><div class="tooltip-inner bg-transparent text-body p-0"></div></div>' title="Facebook" aria-label="Follow us on Facebook">
+            <i class="ci-facebook"></i>
+          </a>
+          <a class="btn btn-icon fs-base btn-outline-secondary border-0" href="#!" data-bs-toggle="tooltip" data-bs-template='<div class="tooltip fs-xs mb-n2" role="tooltip"><div class="tooltip-inner bg-transparent text-body p-0"></div></div>' title="Instagram" aria-label="Follow us on Instagram">
+            <i class="ci-instagram"></i>
+          </a>
+          <a class="btn btn-icon fs-base btn-outline-secondary border-0" href="#!" data-bs-toggle="tooltip" data-bs-template='<div class="tooltip fs-xs mb-n2" role="tooltip"><div class="tooltip-inner bg-transparent text-body p-0"></div></div>' title="Telegram" aria-label="Follow us on Telegram">
+            <i class="ci-telegram"></i>
+          </a>
+          <a class="btn btn-icon fs-base btn-outline-secondary border-0" href="#!" data-bs-toggle="tooltip" data-bs-template='<div class="tooltip fs-xs mb-n2" role="tooltip"><div class="tooltip-inner bg-transparent text-body p-0"></div></div>' title="Pinterest" aria-label="Follow us on Pinterest">
+            <i class="ci-pinterest"></i>
+          </a>
+        </div>
+
+        <!-- Copyright + Payment methods -->
+        <div class="d-lg-flex align-items-center border-top pt-4 mt-3">
+          <div class="d-flex gap-2 gap-sm-3 justify-content-center ms-lg-auto mb-3 mb-md-4 mb-lg-0 order-lg-2">
+            <div>
+              <img src="assets/img/payment-methods/visa-light-mode.svg" class="d-none-dark" alt="Visa">
+              <img src="assets/img/payment-methods/visa-dark-mode.svg" class="d-none d-block-dark" alt="Visa">
+            </div>
+            <div>
+              <img src="assets/img/payment-methods/paypal-light-mode.svg" class="d-none-dark" alt="PayPal">
+              <img src="assets/img/payment-methods/paypal-dark-mode.svg" class="d-none d-block-dark" alt="PayPal">
+            </div>
+            <div>
+              <img src="assets/img/payment-methods/mastercard.svg" alt="Mastercard">
+            </div>
+            <div>
+              <img src="assets/img/payment-methods/google-pay-light-mode.svg" class="d-none-dark" alt="Google Pay">
+              <img src="assets/img/payment-methods/google-pay-dark-mode.svg" class="d-none d-block-dark" alt="Google Pay">
+            </div>
+            <div>
+              <img src="assets/img/payment-methods/apple-pay-light-mode.svg" class="d-none-dark" alt="Apple Pay">
+              <img src="assets/img/payment-methods/apple-pay-dark-mode.svg" class="d-none d-block-dark" alt="Apple Pay">
+            </div>
+          </div>
+          <div class="d-md-flex justify-content-center order-lg-1">
+            <ul class="nav justify-content-center gap-4 order-md-3 mb-4 mb-md-0">
+              <li class="animate-underline">
+                <a class="nav-link fs-xs fw-normal p-0 animate-target" href="#!">Privacy</a>
+              </li>
+              <li class="animate-underline">
+                <a class="nav-link fs-xs fw-normal p-0 animate-target" href="#!">Affiliates</a>
+              </li>
+              <li class="animate-underline">
+                <a class="nav-link fs-xs fw-normal p-0 animate-target" href="#!">Terms of use</a>
+              </li>
+            </ul>
+            <div class="vr text-body-secondary opacity-25 mx-4 d-none d-md-inline-block order-md-2"></div>
+            <p class="fs-xs text-center text-lg-start mb-0 order-md-1">
+              &copy; All rights reserved. Made by <span class="animate-underline"><a class="animate-target text-dark-emphasis text-decoration-none" href="https://createx.studio/" target="_blank" rel="noreferrer">Createx Studio</a></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <div class="floating-buttons position-fixed top-50 end-0 z-sticky me-3 me-xl-4 pb-4">
+      <a class="btn-scroll-top btn btn-sm bg-body border-0 rounded-pill shadow animate-slide-end" href="#top">
+        Top
+        <i class="ci-arrow-right fs-base ms-1 me-n1 animate-target"></i>
+        <span class="position-absolute top-0 start-0 w-100 h-100 border rounded-pill z-0"></span>
+        <svg class="position-absolute top-0 start-0 w-100 h-100 z-1" viewBox="0 0 62 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x=".75" y=".75" width="60.5" height="30.5" rx="15.25" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
+        </svg>
+      </a>
+    </div>
+
+
+    <!-- Vendor scripts -->
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/simplebar/dist/simplebar.min.js"></script>
+
+    <!-- Bootstrap + Theme scripts -->
+    <script src="assets/js/theme.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+    <script>
+      // Define your words and their specific colors
+      const words = [
+        { text: "sweeter.", color: "#f19ab3" },
+        { text: "cooler.", color: "#4da7b6" },
+        { text: "louder.", color: "#538448" }
+      ];
+
+      const wordElement = document.getElementById("fade-word");
+
+      // Create a GSAP timeline that loops infinitely
+      const tl = gsap.timeline({ repeat: -1 });
+
+      // Loop through each word and build the fade sequence
+      words.forEach((word) => {
+
+        // Step 1: Swap the text and color while it is invisible
+        tl.call(() => {
+          wordElement.innerText = word.text;
+          wordElement.style.color = word.color;
+        })
+
+          // Step 2: Fade it in smoothly (takes 0.6 seconds)
+          .to(wordElement, { opacity: 1, duration: 0.6 })
+
+          // Step 3: Fade it out smoothly, but wait 1.5 seconds first so it can be read
+          .to(wordElement, { opacity: 0, duration: 0.6, delay: 1 });
+
+      });
+    </script>
+  </body>
+</html>
