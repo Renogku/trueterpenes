@@ -24,6 +24,7 @@ $gray-900: #181d25 !default;
 $gray-950: #131920 !default;
 $black:    #000 !default;
 
+
 // Disable Bootstrap's default $colors map
 $colors: () !default;
 
@@ -35,8 +36,8 @@ $grays: () !default;
 $min-contrast-ratio:   2 !default;
 
 // Theme colors
-$primary:       #f55266 !default;
-$secondary:     $gray-500 !default;
+$primary:       #0e61fe !default;
+$secondary:     #eaeaea !default;
 $success:       #33b36b !default;
 $info:          #0e61fe !default; //editrd #0ea5e9 to #0e61fe
 $warning:       #fc9231 !default;
