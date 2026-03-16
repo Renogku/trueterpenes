@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="Layer_2" data-name="Layer 2" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 2.8px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <rect class="cls-1" width="64" height="64"></rect>
+      <g>
+        <g>
+          <line class="cls-2" x1="32.038549" y1="32" x2="32.038549" y2="2.001983"></line>
+          <polyline class="cls-2" points="35.54019 20.676346 32.038549 24.177986 28.536908 20.676346"></polyline>
+          <polyline class="cls-2" points="38.588635 3.895323 32.038549 10.445409 25.488463 3.895323"></polyline>
+        </g>
+        <g>
+          <line class="cls-2" x1="32.038549" y1="32" x2="53.25035" y2="10.788199"></line>
+          <polyline class="cls-2" points="42.521616 26.469001 37.569548 26.469001 37.569548 21.516933"></polyline>
+          <polyline class="cls-2" points="56.543167 16.758602 47.279946 16.758602 47.279946 7.495382"></polyline>
+        </g>
+        <g>
+          <line class="cls-2" x1="32.038549" y1="32" x2="62.036566" y2="32"></line>
+          <polyline class="cls-2" points="43.362203 35.501641 39.860562 32 43.362203 28.498359"></polyline>
+          <polyline class="cls-2" points="60.143226 38.550086 53.59314 32 60.143226 25.449914"></polyline>
+        </g>
+        <g>
+          <line class="cls-2" x1="32.038549" y1="32" x2="53.25035" y2="53.211801"></line>
+          <polyline class="cls-2" points="37.569547 42.483067 37.569547 37.530999 42.521616 37.530999"></polyline>
+          <polyline class="cls-2" points="47.279947 56.504618 47.279947 47.241398 56.543167 47.241398"></polyline>
+        </g>
+        <g>
+          <line class="cls-2" x1="32.038549" y1="32" x2="32.038549" y2="61.998017"></line>
+          <polyline class="cls-2" points="28.536908 43.323654 32.038549 39.822014 35.540189 43.323654"></polyline>
+          <polyline class="cls-2" points="25.488463 60.104677 32.038549 53.554591 38.588635 60.104677"></polyline>
+        </g>
+        <g>
+          <line class="cls-2" x1="32.038549" y1="32" x2="10.826748" y2="53.211801"></line>
+          <polyline class="cls-2" points="21.555482 37.530999 26.50755 37.530999 26.50755 42.483067"></polyline>
+          <polyline class="cls-2" points="7.533931 47.241398 16.797151 47.241398 16.797151 56.504618"></polyline>
+        </g>
+        <g>
+          <line class="cls-2" x1="32.038549" y1="32" x2="2.040532" y2="32"></line>
+          <polyline class="cls-2" points="20.714894 28.498359 24.216535 32 20.714894 35.501641"></polyline>
+          <polyline class="cls-2" points="3.933871 25.449914 10.483958 32 3.933871 38.550086"></polyline>
+        </g>
+        <g>
+          <line class="cls-2" x1="32.038549" y1="32" x2="10.826748" y2="10.788199"></line>
+          <polyline class="cls-2" points="26.50755 21.516933 26.50755 26.469001 21.555482 26.469001"></polyline>
+          <polyline class="cls-2" points="16.797151 7.495382 16.797151 16.758602 7.533931 16.758602"></polyline>
+        </g>
+      </g>
+      <rect class="cls-1" y="0" width="64" height="64"></rect>
+    </g>
+  </g>
+</svg>

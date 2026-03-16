@@ -1,0 +1,1619 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" data-pwa="true">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+
+    <!-- SEO Meta Tags -->
+    <title>Cartzilla | Furniture Store - Product Page</title>
+    <meta name="description" content="Cartzilla - Multipurpose Bootstrap E-Commerce HTML Template">
+    <meta name="keywords" content="online shop, e-commerce, online store, market, multipurpose, product landing, cart, checkout, ui kit, light and dark mode, bootstrap, html5, css3, javascript, gallery, slider, mobile, pwa">
+    <meta name="author" content="Createx Studio">
+
+    <!-- Webmanifest + Favicon / App icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" href="assets/app-icons/icon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="assets/app-icons/icon-180x180.png">
+
+    <!-- Theme switcher (color modes) -->
+    <script src="assets/js/theme-switcher.js"></script>
+
+    <!-- Preloaded local web font (Inter) -->
+    <link rel="preload" href="assets/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Font icons -->
+    <link rel="preload" href="assets/icons/cartzilla-icons.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/icons/cartzilla-icons.min.css">
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" href="assets/vendor/choices.js/public/assets/styles/choices.min.css">
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/vendor/glightbox/dist/css/glightbox.min.css">
+
+    <!-- Bootstrap + Theme styles -->
+    <link rel="preload" href="assets/css/theme.min.css" as="style">
+    <link rel="preload" href="assets/css/theme.rtl.min.css" as="style">
+    <link rel="stylesheet" href="assets/css/theme.min.css" id="theme-styles">
+    <style>
+               /* 1. Only trigger hover when mouse is on the IMAGE area */
+                /* --- Logic for IMAGE SWAP --- */
+                /* Hide primary image when hovering over the parent link */
+                .hover-effect-opacity:hover .opacity-100 {
+                  opacity: 0 !important;
+                }
+                /* Show secondary image when hovering over the parent link */
+                .hover-effect-opacity:hover .opacity-0 {
+                  opacity: 1 !important;
+                }
+                /* Smooth transition for both images */
+                .hover-effect-target {
+                  transition: opacity 0.3s ease-in-out;
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+
+                /* --- Logic for TEXT OVERLAY --- */
+                .product-image-hover:hover .product-hover-overlay {
+                  background: rgba(0, 0, 0, 0.5);
+                  opacity: 1 !important;
+                }
+                /* Ensure overlay is at the bottom as requested previously */
+                .product-hover-overlay {
+                  align-items: flex-end; 
+                  padding-bottom: 1.5rem;
+                }
+
+                /* 2. Fix the Select Arrow overlapping text */
+                .form-select-sm {
+                  background-position: right 0 center !important; /* Pushes arrow to the far right */
+                  background-size: 12px 10px !important;
+                }
+
+                /* 3. Add to Cart Hover Logic */
+                .hover-blue-atc {
+                  border-color: #e5e8ed !important;
+                  color: #1a1a1a !important;
+                  transition: all 0.2s ease-in-out;
+                }
+
+                .hover-blue-atc:hover {
+                  background-color: #0d6efd !important;
+                  border-color: #0d6efd !important;
+                  color: #fff !important;
+                }
+                
+                .product-title-hover {
+                  color: #000;
+                  text-decoration: none;
+                  transition: color .2s ease;
+                }
+
+                .product-title-hover:hover {
+                  color: #0d6efd !important;
+                }
+               </style>
+  </head>
+
+
+  <!-- Body -->
+  <body>
+    <!-- Shopping cart offcanvas (Empty state) -->
+    <div class="offcanvas offcanvas-end pb-sm-2 px-sm-2" id="shoppingCart" tabindex="-1" aria-labelledby="shoppingCartLabel" style="width: 500px">
+      <div class="offcanvas-header py-3 pt-lg-4">
+        <h4 class="offcanvas-title" id="shoppingCartLabel">Shopping cart</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body text-center">
+        <svg class="d-block mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" width="60" viewBox="0 0 29.5 30"><path class="text-body-tertiary" d="M17.8 4c.4 0 .8-.3.8-.8v-2c0-.4-.3-.8-.8-.8-.4 0-.8.3-.8.8v2c0 .4.3.8.8.8zm3.2.6c.4.2.8 0 1-.4l.4-.9c.2-.4 0-.8-.4-1s-.8 0-1 .4l-.4.9c-.2.4 0 .9.4 1zm-7.5-.4c.2.4.6.6 1 .4s.6-.6.4-1l-.4-.9c-.2-.4-.6-.6-1-.4s-.6.6-.4 1l.4.9z" fill="currentColor"/><path class="text-body-emphasis" d="M10.7 24.5c-1.5 0-2.8 1.2-2.8 2.8S9.2 30 10.7 30s2.8-1.2 2.8-2.8-1.2-2.7-2.8-2.7zm0 4c-.7 0-1.2-.6-1.2-1.2s.6-1.2 1.2-1.2 1.2.6 1.2 1.2-.5 1.2-1.2 1.2zm11.1-4c-1.5 0-2.8 1.2-2.8 2.8a2.73 2.73 0 0 0 2.8 2.8 2.73 2.73 0 0 0 2.8-2.8c0-1.6-1.3-2.8-2.8-2.8zm0 4c-.7 0-1.2-.6-1.2-1.2s.6-1.2 1.2-1.2 1.2.6 1.2 1.2-.6 1.2-1.2 1.2zM8.7 18h16c.3 0 .6-.2.7-.5l4-10c.2-.5-.2-1-.7-1H9.3c-.4 0-.8.3-.8.8s.4.7.8.7h18.3l-3.4 8.5H9.3L5.5 1C5.4.7 5.1.5 4.8.5h-4c-.5 0-.8.3-.8.7s.3.8.8.8h3.4l3.7 14.6a3.24 3.24 0 0 0-2.3 3.1C5.5 21.5 7 23 8.7 23h16c.4 0 .8-.3.8-.8s-.3-.8-.8-.8h-16a1.79 1.79 0 0 1-1.8-1.8c0-1 .9-1.6 1.8-1.6z" fill="currentColor"/></svg>
+        <h6 class="mb-2">Your shopping cart is currently empty!</h6>
+        <p class="fs-sm mb-4">Explore our wide range of products and add items to your cart to proceed with your purchase.</p>
+        <a class="btn btn-dark rounded-pill" href="shop-catalog-furniture.html">Continue shopping</a>
+      </div>
+    </div>
+
+
+    <!-- Topbar -->
+    <div class="container position-relative d-flex justify-content-between z-1 py-3">
+      <div class="nav animate-underline">
+        <span class="text-secondary-emphasis fs-xs me-1">Contact us <span class="d-none d-sm-inline">24/7</span></span>
+        <a class="nav-link animate-target fs-xs fw-semibold p-0" href="tel:+15053753082">+1&nbsp;50&nbsp;537&nbsp;53&nbsp;082</a>
+      </div>
+      <a class="text-secondary-emphasis fs-xs text-decoration-none d-none d-md-inline" href="#!">🔥 The Biggest Sale Ever 50% Off</a>
+      <ul class="nav gap-4">
+        <li class="animate-underline">
+          <a class="nav-link animate-target fs-xs p-0" href="#!">Wishlist</a>
+        </li>
+        <li class="animate-underline">
+          <a class="nav-link animate-target fs-xs p-0" href="#!">Account</a>
+        </li>
+      </ul>
+    </div>
+
+
+    <!-- Navigation bar (Page header) -->
+    <header class="navbar-sticky sticky-top container z-fixed px-2" data-sticky-element>
+      <div class="navbar navbar-expand-lg flex-nowrap bg-body rounded-pill shadow ps-0 mx-1">
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark rounded-pill z-0 d-none d-block-dark"></div>
+
+        <!-- Mobile offcanvas menu toggler (Hamburger) -->
+        <button type="button" class="navbar-toggler ms-3" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar brand (Logo) -->
+        <a class="navbar-brand position-relative z-1 ms-4 ms-sm-5 ms-lg-4 me-2 me-sm-0 me-lg-3" href="home-furniture.html">Cartzilla</a>
+
+        <!-- Main navigation that turns into offcanvas on screens < 992px wide (lg breakpoint) -->
+        <nav class="offcanvas offcanvas-start" id="navbarNav" tabindex="-1" aria-labelledby="navbarNavLabel">
+          <div class="offcanvas-header py-3">
+            <h5 class="offcanvas-title" id="navbarNavLabel">Browse Cartzilla</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body pt-3 pb-4 py-lg-0 mx-lg-auto">
+            <ul class="navbar-nav position-relative">
+              <li class="nav-item dropdown me-lg-n1 me-xl-0">
+                <a class="nav-link dropdown-toggle fs-sm" href="#" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Home</a>
+                <ul class="dropdown-menu" style="--cz-dropdown-spacer: 1rem">
+                  <li class="hover-effect-opacity px-2 mx-n2">
+                    <a class="dropdown-item d-block mb-0" href="home-electronics.html">
+                      <span class="fw-medium">Electronics Store</span>
+                      <span class="d-block fs-xs text-body-secondary">Megamenu + Hero slider</span>
+                      <div class="d-none d-lg-block hover-effect-target position-absolute top-0 start-100 bg-body border border-light-subtle rounded rounded-start-0 transition-none invisible opacity-0 pt-2 px-2 ms-n2" style="width: 212px; height: calc(100% + 2px); margin-top: -1px">
+                        <img class="position-relative z-2 d-none-dark" src="assets/img/mega-menu/demo-preview/electronics-light.jpg" alt="Electronics Store">
+                        <img class="position-relative z-2 d-none d-block-dark" src="assets/img/mega-menu/demo-preview/electronics-dark.jpg" alt="Electronics Store">
+                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none-dark" style="box-shadow: .875rem .5rem 2rem -.5rem #676f7b; opacity: .1"></span>
+                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none d-block-dark" style="box-shadow: .875rem .5rem 1.875rem -.5rem #080b12; opacity: .25"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="hover-effect-opacity px-2 mx-n2">
+                    <a class="dropdown-item d-block mb-0" href="home-fashion-v1.html">
+                      <span class="fw-medium">Fashion Store v.1</span>
+                      <span class="d-block fs-xs text-body-secondary">Hero promo slider</span>
+                      <div class="d-none d-lg-block hover-effect-target position-absolute top-0 start-100 bg-body border border-light-subtle rounded rounded-start-0 transition-none invisible opacity-0 pt-2 px-2 ms-n2" style="width: 212px; height: calc(100% + 2px); margin-top: -1px">
+                        <img class="position-relative z-2 d-none-dark" src="assets/img/mega-menu/demo-preview/fashion-1-light.jpg" alt="Fashion Store v.1">
+                        <img class="position-relative z-2 d-none d-block-dark" src="assets/img/mega-menu/demo-preview/fashion-1-dark.jpg" alt="Fashion Store v.1">
+                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none-dark" style="box-shadow: .875rem .5rem 2rem -.5rem #676f7b; opacity: .1"></span>
+                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none d-block-dark" style="box-shadow: .875rem .5rem 1.875rem -.5rem #080b12; opacity: .25"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="hover-effect-opacity px-2 mx-n2">
+                    <a class="dropdown-item d-block mb-0" href="home-fashion-v2.html">
+                      <span class="fw-medium">Fashion Store v.2</span>
+                      <span class="d-block fs-xs text-body-secondary">Hero banner with hotspots</span>
+                      <div class="d-none d-lg-block hover-effect-target position-absolute top-0 start-100 bg-body border border-light-subtle rounded rounded-start-0 transition-none invisible opacity-0 pt-2 px-2 ms-n2" style="width: 212px; height: calc(100% + 2px); margin-top: -1px">
+                        <img class="position-relative z-2 d-none-dark" src="assets/img/mega-menu/demo-preview/fashion-2-light.jpg" alt="Fashion Store v.2">
+                        <img class="position-relative z-2 d-none d-block-dark" src="assets/img/mega-menu/demo-preview/fashion-2-dark.jpg" alt="Fashion Store v.2">
+                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none-dark" style="box-shadow: .875rem .5rem 2rem -.5rem #676f7b; opacity: .1"></span>
+                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none d-block-dark" style="box-shadow: .875rem .5rem 1.875rem -.5rem #080b12; opacity: .25"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="hover-effect-opacity px-2 mx-n2">
+                    <a class="dropdown-item d-block mb-0" href="home-furniture.html">
+                      <span class="fw-medium">Furniture Store</span>
+                      <span class="d-block fs-xs text-body-secondary">Fancy product carousel</span>
+                      <div class="d-none d-lg-block hover-effect-target position-absolute top-0 start-100 bg-body border border-light-subtle rounded rounded-start-0 transition-none invisible opacity-0 pt-2 px-2 ms-n2" style="width: 212px; height: calc(100% + 2px); margin-top: -1px">
+                        <img class="position-relative z-2 d-none-dark" src="assets/img/mega-menu/demo-preview/furniture-light.jpg" alt="Furniture Store">
+                        <img class="position-relative z-2 d-none d-block-dark" src="assets/img/mega-menu/demo-preview/furniture-dark.jpg" alt="Furniture Store">
+                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none-dark" style="box-shadow: .875rem .5rem 2rem -.5rem #676f7b; opacity: .1"></span>
+                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none d-block-dark" style="box-shadow: .875rem .5rem 1.875rem -.5rem #080b12; opacity: .25"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="hover-effect-opacity px-2 mx-n2">
+                    <a class="dropdown-item d-block mb-0" href="home-grocery.html">
+                      <span class="fw-medium">Grocery Store</span>
+                      <span class="d-block fs-xs text-body-secondary">Hero slider + Category cards</span>
+                      <div class="d-none d-lg-block hover-effect-target position-absolute top-0 start-100 bg-body border border-light-subtle rounded rounded-start-0 transition-none invisible opacity-0 pt-2 px-2 ms-n2" style="width: 212px; height: calc(100% + 2px); margin-top: -1px">
+                        <img class="position-relative z-2 d-none-dark" src="assets/img/mega-menu/demo-preview/grocery-light.jpg" alt="Grocery Store">
+                        <img class="position-relative z-2 d-none d-block-dark" src="assets/img/mega-menu/demo-preview/grocery-dark.jpg" alt="Grocery Store">
+                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none-dark" style="box-shadow: .875rem .5rem 2rem -.5rem #676f7b; opacity: .1"></span>
+                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none d-block-dark" style="box-shadow: .875rem .5rem 1.875rem -.5rem #080b12; opacity: .25"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="hover-effect-opacity px-2 mx-n2">
+                    <a class="dropdown-item d-block mb-0" href="home-marketplace.html">
+                      <span class="fw-medium">Marketplace</span>
+                      <span class="d-block fs-xs text-body-secondary">Multi-vendor, digital goods</span>
+                      <div class="d-none d-lg-block hover-effect-target position-absolute top-0 start-100 bg-body border border-light-subtle rounded rounded-start-0 transition-none invisible opacity-0 pt-2 px-2 ms-n2" style="width: 212px; height: calc(100% + 2px); margin-top: -1px">
+                        <img class="position-relative z-2 d-none-dark" src="assets/img/mega-menu/demo-preview/marketplace-light.jpg" alt="Marketplace">
+                        <img class="position-relative z-2 d-none d-block-dark" src="assets/img/mega-menu/demo-preview/marketplace-dark.jpg" alt="Marketplace">
+                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none-dark" style="box-shadow: .875rem .5rem 2rem -.5rem #676f7b; opacity: .1"></span>
+                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none d-block-dark" style="box-shadow: .875rem .5rem 1.875rem -.5rem #080b12; opacity: .25"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="hover-effect-opacity px-2 mx-n2">
+                    <a class="dropdown-item d-block mb-0" href="home-single-store.html">
+                      <span class="fw-medium">Single Product Store</span>
+                      <span class="d-block fs-xs text-body-secondary">Single product / mono brand</span>
+                      <div class="d-none d-lg-block hover-effect-target position-absolute top-0 start-100 bg-body border border-light-subtle rounded rounded-start-0 transition-none invisible opacity-0 pt-2 px-2 ms-n2" style="width: 212px; height: calc(100% + 2px); margin-top: -1px">
+                        <img class="position-relative z-2 d-none-dark" src="assets/img/mega-menu/demo-preview/single-store-light.jpg" alt="Single Product Store">
+                        <img class="position-relative z-2 d-none d-block-dark" src="assets/img/mega-menu/demo-preview/single-store-dark.jpg" alt="Single Product Store">
+                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none-dark" style="box-shadow: .875rem .5rem 2rem -.5rem #676f7b; opacity: .1"></span>
+                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none d-block-dark" style="box-shadow: .875rem .5rem 1.875rem -.5rem #080b12; opacity: .25"></span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown position-static me-lg-n1 me-xl-0">
+                <a class="nav-link dropdown-toggle fs-sm active" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Shop</a>
+                <div class="dropdown-menu p-4" style="--cz-dropdown-spacer: 1rem">
+                  <div class="d-flex flex-column flex-lg-row gap-4">
+                    <div style="min-width: 190px">
+                      <div class="h6 mb-2">Electronics Store</div>
+                      <ul class="nav flex-column gap-2 mt-0">
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-categories-electronics.html">Categories Page</a>
+                        </li>
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-electronics.html">Catalog with Side Filters</a>
+                        </li>
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-product-general-electronics.html">Product General Info</a>
+                        </li>
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-product-details-electronics.html">Product Details</a>
+                        </li>
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-product-reviews-electronics.html">Product Reviews</a>
+                        </li>
+                      </ul>
+                      <div class="h6 pt-4 mb-2">Fashion Store</div>
+                      <ul class="nav flex-column gap-2 mt-0">
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-fashion.html">Catalog with Side Filters</a>
+                        </li>
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-product-fashion.html">Product Page</a>
+                        </li>
+                      </ul>
+                      <div class="h6 pt-4 mb-2">Furniture Store</div>
+                      <ul class="nav flex-column gap-2 mt-0">
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-furniture.html">Catalog with Top Filters</a>
+                        </li>
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-product-furniture.html">Product Page</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div style="min-width: 190px">
+                      <div class="h6 mb-2">Grocery Store</div>
+                      <ul class="nav flex-column gap-2 mt-0">
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-grocery.html">Catalog with Side Filters</a>
+                        </li>
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-product-grocery.html">Product Page</a>
+                        </li>
+                      </ul>
+                      <div class="h6 pt-4 mb-2">Marketplace</div>
+                      <ul class="nav flex-column gap-2 mt-0">
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-catalog-marketplace.html">Catalog with Top Filters</a>
+                        </li>
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="shop-product-marketplace.html">Digital Product Page</a>
+                        </li>
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="checkout-marketplace.html">Cart / Checkout</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div style="min-width: 190px">
+                      <div class="h6 mb-2">Checkout v.1</div>
+                      <ul class="nav flex-column gap-2 mt-0">
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="checkout-v1-cart.html">Shopping Cart</a>
+                        </li>
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="checkout-v1-delivery-1.html">Delivery Info (Step 1)</a>
+                        </li>
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="checkout-v1-delivery-2.html">Delivery Info (Step 2)</a>
+                        </li>
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="checkout-v1-shipping.html">Shipping Address</a>
+                        </li>
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="checkout-v1-payment.html">Payment</a>
+                        </li>
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="checkout-v1-thankyou.html">Thank You Page</a>
+                        </li>
+                      </ul>
+                      <div class="h6 pt-4 mb-2">Checkout v.2</div>
+                      <ul class="nav flex-column gap-2 mt-0">
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="checkout-v2-cart.html">Shopping Cart</a>
+                        </li>
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="checkout-v2-delivery.html">Delivery Info</a>
+                        </li>
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="checkout-v2-pickup.html">Pickup from Store</a>
+                        </li>
+                        <li class="d-flex w-100 pt-1">
+                          <a class="nav-link animate-underline animate-target d-inline fw-normal text-truncate p-0" href="checkout-v2-thankyou.html">Thank You Page</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown me-lg-n1 me-xl-0">
+                <a class="nav-link dropdown-toggle fs-sm" href="#" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" data-bs-auto-close="outside" aria-expanded="false">Account</a>
+                <ul class="dropdown-menu" style="--cz-dropdown-spacer: 1rem">
+                  <li class="dropend">
+                    <a class="dropdown-item dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Auth Pages</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="account-signin.html">Sign In</a></li>
+                      <li><a class="dropdown-item" href="account-signup.html">Sign Up</a></li>
+                      <li><a class="dropdown-item" href="account-password-recovery.html">Password Recovery</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropend">
+                    <a class="dropdown-item dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Shop User</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="account-orders.html">Orders History</a></li>
+                      <li><a class="dropdown-item" href="account-wishlist.html">Wishlist</a></li>
+                      <li><a class="dropdown-item" href="account-payment.html">Payment Methods</a></li>
+                      <li><a class="dropdown-item" href="account-reviews.html">My Reviews</a></li>
+                      <li><a class="dropdown-item" href="account-info.html">Personal Info</a></li>
+                      <li><a class="dropdown-item" href="account-addresses.html">Addresses</a></li>
+                      <li><a class="dropdown-item" href="account-notifications.html">Notifications</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropend">
+                    <a class="dropdown-item dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Marketplace User</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="account-marketplace-dashboard.html">Dashboard</a></li>
+                      <li><a class="dropdown-item" href="account-marketplace-products.html">Products</a></li>
+                      <li><a class="dropdown-item" href="account-marketplace-sales.html">Sales</a></li>
+                      <li><a class="dropdown-item" href="account-marketplace-payouts.html">Payouts</a></li>
+                      <li><a class="dropdown-item" href="account-marketplace-purchases.html">Purchases</a></li>
+                      <li><a class="dropdown-item" href="account-marketplace-favorites.html">Favorites</a></li>
+                      <li><a class="dropdown-item" href="account-marketplace-settings.html">Settings</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown me-lg-n1 me-xl-0">
+                <a class="nav-link dropdown-toggle fs-sm" href="#" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" data-bs-auto-close="outside" aria-expanded="false">Pages</a>
+                <ul class="dropdown-menu" style="--cz-dropdown-spacer: 1rem">
+                  <li class="dropend">
+                    <a class="dropdown-item dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">About</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="about-v1.html">About v.1</a></li>
+                      <li><a class="dropdown-item" href="about-v2.html">About v.2</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropend">
+                    <a class="dropdown-item dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Blog</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="blog-grid-v1.html">Grid View v.1</a></li>
+                      <li><a class="dropdown-item" href="blog-grid-v2.html">Grid View v.2</a></li>
+                      <li><a class="dropdown-item" href="blog-list.html">List View</a></li>
+                      <li><a class="dropdown-item" href="blog-single-v1.html">Single Post v.1</a></li>
+                      <li><a class="dropdown-item" href="blog-single-v2.html">Single Post v.2</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropend">
+                    <a class="dropdown-item dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Contact</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="contact-v1.html">Contact v.1</a></li>
+                      <li><a class="dropdown-item" href="contact-v2.html">Contact v.2</a></li>
+                      <li><a class="dropdown-item" href="contact-v3.html">Contact v.3</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropend">
+                    <a class="dropdown-item dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Help Center</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="help-topics-v1.html">Help Topics v.1</a></li>
+                      <li><a class="dropdown-item" href="help-topics-v2.html">Help Topics v.2</a></li>
+                      <li><a class="dropdown-item" href="help-single-article-v1.html">Help Single Article v.1</a></li>
+                      <li><a class="dropdown-item" href="help-single-article-v2.html">Help Single Article v.2</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropend">
+                    <a class="dropdown-item dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">404 Error</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="404-electronics.html">404 Electronics</a></li>
+                      <li><a class="dropdown-item" href="404-fashion.html">404 Fashion</a></li>
+                      <li><a class="dropdown-item" href="404-furniture.html">404 Furniture</a></li>
+                      <li><a class="dropdown-item" href="404-grocery.html">404 Grocery</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
+                </ul>
+              </li>
+              <li class="nav-item me-lg-n2 me-xl-0">
+                <a class="nav-link fs-sm" href="docs/installation.html">Docs</a>
+              </li>
+              <li class="nav-item me-lg-n2 me-xl-0">
+                <a class="nav-link fs-sm" href="docs/typography.html">Components</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- Button group -->
+        <div class="d-flex gap-sm-1 position-relative z-1">
+
+          <!-- Theme switcher (light/dark/auto) -->
+          <div class="dropdown">
+            <button type="button" class="theme-switcher btn btn-icon btn-outline-secondary fs-lg border-0 rounded-circle animate-scale" data-bs-toggle="dropdown" data-bs-display="dynamic" aria-expanded="false" aria-label="Toggle theme (light)">
+              <span class="theme-icon-active d-flex animate-target">
+                <i class="ci-sun"></i>
+              </span>
+            </button>
+            <ul class="dropdown-menu start-50 translate-middle-x" style="--cz-dropdown-min-width: 9rem; --cz-dropdown-spacer: 1rem">
+              <li>
+                <button type="button" class="dropdown-item active" data-bs-theme-value="light" aria-pressed="true">
+                  <span class="theme-icon d-flex fs-base me-2">
+                    <i class="ci-sun"></i>
+                  </span>
+                  <span class="theme-label">Light</span>
+                  <i class="item-active-indicator ci-check ms-auto"></i>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item" data-bs-theme-value="dark" aria-pressed="false">
+                  <span class="theme-icon d-flex fs-base me-2">
+                    <i class="ci-moon"></i>
+                  </span>
+                  <span class="theme-label">Dark</span>
+                  <i class="item-active-indicator ci-check ms-auto"></i>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item" data-bs-theme-value="auto" aria-pressed="false">
+                  <span class="theme-icon d-flex fs-base me-2">
+                    <i class="ci-auto"></i>
+                  </span>
+                  <span class="theme-label">Auto</span>
+                  <i class="item-active-indicator ci-check ms-auto"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cart button -->
+          <button type="button" class="btn btn-icon fs-lg btn-outline-secondary border-0 rounded-circle animate-scale me-2" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart" aria-label="Shopping cart">
+            <i class="ci-shopping-cart animate-target"></i>
+          </button>
+
+          <!-- Search -->
+          <div class="dropdown">
+            <button type="button" class="btn btn-icon fs-lg btn-secondary rounded-circle animate-scale" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-label="Toggle search bar">
+              <i class="ci-search animate-target"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end p-3" style="--cz-dropdown-min-width: 20rem; --cz-dropdown-spacer: 1rem">
+              <form class="position-relative">
+                <input type="search" class="form-control rounded-pill" placeholder="Search..." data-autofocus="dropdown">
+                <button type="submit" class="btn btn-icon btn-sm fs-lg btn-secondary rounded-circle position-absolute top-0 end-0 mt-1 me-1" aria-label="Search">
+                  <i class="ci-arrow-right"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- Page content -->
+    <main class="content-wrapper">
+      <div class="">
+        <div class="container">
+        <!-- Breadcrumb -->
+        <nav class="position-relative pt-3 mt-3 mt-md-4 mb-4" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="home-furniture.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Modifiers</a></li>
+          </ol>
+        </nav>
+
+        </div>
+        <!-- Product gallery and details -->
+        <section class=" pb-4 pb-md-5 mb-2 mb-md-0 mb-xl-3 container">
+        <div class="row">
+          <!-- Gallery -->
+          <div class="col-md-6 col-xl-5 pb-4 pb-md-0 mb-2 mb-sm-3 mb-md-0">
+              <div class="col">
+                <a class=" position-relative d-flex rounded-4 overflow-hidden bg-secondary" href="https://trueterpenes.com/wp-content/uploads/2025/06/Ice_Modifier-scaled.webp" data-glightbox data-gallery="product-gallery">
+                  <div class="ratio ratio-1x1 hover-effect-target">
+                    <img src="https://trueterpenes.com/wp-content/uploads/2025/06/Ice_Modifier-scaled.webp" alt="Image">
+                  </div>
+                </a>
+              </div>
+          </div>
+
+
+          <!-- Product details and options -->
+          <div class="col-md-6 col-xl-7">
+            <div class="d-none d-md-block" style="margin-top: -90px"></div>
+            <div class="sticky-md-top ps-md-2 ps-xl-4">
+              <div class="d-none d-md-block" style="padding-top: 90px"></div>
+              <h1 class="h6 fw-bold">Modifier</h1>
+              <!-- <div class="h4 fw-bold mb-4">$357.00 <del class="fs-sm fw-normal text-body-tertiary">$416.00</del></div> -->
+               <div class="h2 fw-medium">Ice</div>
+              <!-- Color options -->
+              <!-- <div class="mb-4">
+                <label class="form-label fw-semibold pb-1 mb-2">Color: <span class="text-body fw-normal" id="colorOption">Viridian</span></label>
+                <div class="d-flex flex-wrap gap-2" data-binded-label="#colorOption">
+                  <input type="radio" class="btn-check" name="colors" id="viridian" checked>
+                  <label for="viridian" class="btn btn-image p-0" data-label="Viridian">
+                    <img src="assets/img/shop/furniture/product/colors/color01.png" width="56" alt="Viridian color">
+                    <span class="visually-hidden">Viridian</span>
+                  </label>
+                  <input type="radio" class="btn-check" name="colors" id="green">
+                  <label for="green" class="btn btn-image p-0" data-label="Green">
+                    <img src="assets/img/shop/furniture/product/colors/color02.png" width="56" alt="Green color">
+                    <span class="visually-hidden">Green</span>
+                  </label>
+                  <input type="radio" class="btn-check" name="colors" id="blue">
+                  <label for="blue" class="btn btn-image p-0" data-label="Blue">
+                    <img src="assets/img/shop/furniture/product/colors/color03.png" width="56" alt="Blue color">
+                    <span class="visually-hidden">Blue</span>
+                  </label>
+                </div>
+              </div> -->
+
+            
+
+              <!-- Shipping info -->
+              <div class="mb-4">
+                <h6 class="d-flex align-items-center fs-sm">
+                  <img src="assets/img/shop/WebIcons_Ice-Function-Bold.svg" alt="" height="27.2" width="33.2">
+                  &nbsp;Funcation: <span class="fw-medium">&nbsp;Cooling</span>
+                </h6>
+                <div class="fs-sm mb-3">
+                  <span class="text-dark">What’s cooler than being cool? Ice Modifier brings a refreshing chill to any profile without changing the flavor. Just a clean, cooling sensation on the tongue. Tap into this trend and put it on Ice.</span>
+                </div>
+                <div class="fs-sm text-dark">
+                  Ice Modifier is highly concentrated and is designed to be used at a lower percentage than our typical terpene blends. <span class="fw-bold">Do not exceed 0.59% total usage of this material in final inhalable products.</span> Download the <a href="assets/img/shop/True_Terpenes_Modifiers_SOP.pdf" target="_blank">Modifier SOP</a> for recommended pairings, inclusion percentages, and formulation guidance.
+                </div>
+              </div>
+              <div class="h3 fw-bold" id="productPrice">$35.00</div>
+              <div class="mb-4">
+              <label class="form-label fw-semibold pb-1 mb-2">Size:</label>
+
+              <div class="d-flex flex-wrap gap-2">
+                <input type="radio" class="btn-check" name="size" id="size5ml" checked data-price="35">
+                <label class="btn btn-outline-dark rounded-pill px-3" for="size5ml">5mL</label>
+
+                <input type="radio" class="btn-check" name="size" id="size1oz" data-price="135">
+                <label class="btn btn-outline-dark rounded-pill px-3" for="size1oz">1oz</label>
+
+                <input type="radio" class="btn-check" name="size" id="size1oz" data-price="420">
+                <label class="btn btn-outline-dark rounded-pill px-3" for="size1oz">4oz</label>
+
+                <input type="radio" class="btn-check" name="size" id="size1oz" data-price="700">
+                <label class="btn btn-outline-dark rounded-pill px-3" for="size1oz">8oz</label>
+
+                <input type="radio" class="btn-check" name="size" id="size16oz" data-price="wholesale">
+                <label class="btn btn-outline-dark rounded-pill px-3" for="size16oz">16oz</label>
+
+                <input type="radio" class="btn-check" name="size" id="size32oz" data-price="wholesale">
+                <label class="btn btn-outline-dark rounded-pill px-3" for="size32oz">32oz</label>
+              </div>
+              </div>
+              <div class="d-flex gap-3 mb-4">
+                <div class="count-input flex-shrink-0 rounded-pill">
+                  <button type="button" class="btn btn-icon btn-lg" data-decrement="" aria-label="Decrement quantity" disabled="">
+                    <i class="ci-minus"></i>
+                  </button>
+                  <input type="number" class="form-control form-control-lg" value="1" min="1" readonly="">
+                  <button type="button" class="btn btn-icon btn-lg" data-increment="" aria-label="Increment quantity">
+                    <i class="ci-plus"></i>
+                  </button>
+                </div>
+                <button type="button" class="btn btn-lg btn-info   rounded-pill w-100">Add to cart</button>
+              </div>
+              <p class="text-center fs-xs">99% of orders ship same or next business day</p>
+              <div class="rounded-4 p-3 mt-3 mb-3" style="background-color: #bedbff;">
+                <div class="row align-items-center">
+
+                  <div class="col-md-6 mb-3 mb-md-0">
+                    <h6 class="mb-1 fw-bold">Bundle &amp; Save</h6>
+                    <div class="fw-xs mb-0 text-dark">on any same size, full price products</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <p class="mb-1 fw-semibold text-dark">Buy 5 get 1 FREE | Add 6 to Cart</p>
+                    <p class="mb-2 fw-semibold text-dark">Buy 10 get 3 FREE | Add 13 to Cart</p>
+                    <a href="#" class="link-info fs-sm">Terms</a>
+                  </div>
+
+                </div>
+              </div>
+              <div>
+                <h4 class="h6 mb-0">Storage & Handling</h4>
+                <p class="fs-sm">Store in original container, sealed tightly, in a cool, dry place away from sunlight or heat sources.</p>
+              </div>
+              <div class="fs-sm"> 
+                <span class="h6">Special Handling Instructions:</span>
+                Store in original container, sealed tightly, in a cool, dry place away from sunlight or heat sources.
+              </div>
+              <div class="mt-3">
+                <h6 class="fs-sm"><a href="assets/img/shop/True_Terpenes_Modifiers_SOP.pdf" class="text-info animate-underline animate-target">Download Our Download Our Modifiers SOP <i class="ci-arrow-right fs-base"></i></a></h6>
+              </div>
+              <div class="mt-3">
+                <h6 class="fs-sm"><a href="#" class="animate-underline animate-target">View product documents and details</a></h6>
+              </div>
+            </div>
+          </div>
+          </div>
+        </section>
+
+        <section class="pb-5 mb-2 mb-sm-3 mb-lg-4 mb-xl-5 d-flex justify-content-center justify-content-lg-start container">
+        <img src="assets/img/shop/Certifications_Card.jpeg"
+            class="img-fluid w-25"
+            alt="Certifications Card">
+      </section>
+
+      <section class="py-5" style="background-color: #f5f5f5;">
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="mb-5">
+      <h2 class="h3 mb-3">How to Use Modifiers</h2>
+      <p class="mb-0 text-dark">
+        If you know how to formulate with terpenes, you know how to formulate with Modifiers.
+        Always start small and test in format before going to scale.
+        For detailed information and recommended pairings,
+        <a href="assets/img/shop/True_Terpenes_Modifiers_SOP.pdf" target="_blank" class="fw-semibold">Download the SOP →</a>
+      </p>
+    </div>
+
+    <!-- Steps -->
+    <div class="row align-items-center justify-content-center text-center">
+
+      <!-- Step 1 -->
+      <div class="col-lg-3 col-md-8 mb-4 mb-lg-0">
+        <div class="mb-3">
+          <img src="assets/img/shop/1-PairBlend-modifiers.svg" class="img-fluid" style="max-width:120px;" alt="">
+        </div>
+        <p class="mb-0">
+          <strong>1.</strong> Pair a Modifier with True Terpenes blends.
+        </p>
+      </div>
+
+      <!-- Arrow -->
+      <div class="col-lg-1 d-none d-lg-flex justify-content-center">
+        <img src="assets/img/shop/MTC-arrow.svg" alt="">
+      </div>
+
+      <!-- Step 2 -->
+      <div class="col-lg-3 col-md-8 mb-4 mb-lg-0">
+        <div class="mb-3">
+          <img src="assets/img/shop/2-Mix-modifiers.svg" class="img-fluid" style="max-width:120px;" alt="">
+        </div>
+        <p class="mb-0">
+          <strong>2.</strong> Formulate as you would with terpenes.
+        </p>
+      </div>
+
+      <!-- Arrow -->
+      <div class="col-lg-1 d-none d-lg-flex justify-content-center">
+        <img src="assets/img/shop/MTC-arrow.svg" alt="">
+      </div>
+
+      <!-- Step 3 -->
+      <div class="col-lg-3 col-md-8">
+        <div class="mb-3">
+          <img src="assets/img/shop/3-Produce-modifiers.svg" class="img-fluid" style="max-width:120px;" alt="">
+        </div>
+        <p class="mb-0">
+          <strong>3.</strong> Spray flower as you would with terpenes or fill carts and trial.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="py-5">
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="text-center mb-5">
+      <h2 class="h3 mb-3">Create an Experience Unlike Any Other, for Any Application</h2>
+      <p class="mb-0 text-dark fs-sm">
+        Add Modifiers to terpene blends at the formulation stage to enhance any application.
+      </p>
+    </div>
+
+    <!-- Cards -->
+    <div class="row g-4 text-center">
+
+      <!-- Card 1 -->
+      <div class="col-lg-4 col-md-6">
+        <img src="assets/img/shop/Application_Ice.webp" class="img-fluid mb-3" alt="">
+        <h5 class="fw-bold mb-0">
+          Cool & Refreshing Joints & Vape
+        </h5>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-lg-4 col-md-6">
+        <img src="assets/img/shop/Application_Skunk.webp" class="img-fluid mb-3" alt="">
+        <h5 class="fw-bold mb-0">
+          Louder Than Loud Canna-forward Vape, Flower, & Pre-rolls
+        </h5>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-lg-4 col-md-6 mx-md-auto">
+        <img src="assets/img/shop/Application_Sweet.webp" class="img-fluid mb-3" alt="">
+        <h5 class="fw-bold mb-0">
+          Fruity & Dessert Vape & Pre-rolls Made Sweeter
+        </h5>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+        <!-- Product description -->
+        <section class="pb-5 mb-2 mb-sm-3 mb-lg-4 mb-xl-5 p-4" style="background-color:#f5f5f5;">
+          <div class="container">
+          <div class="row">
+  <div class="col-md-5 col-xl-5 mb-xxl-3">
+    <h3>Product Specifications</h3>
+  </div>
+
+  <div class="col-md-7 col-xl-7 mb-xxl-3">
+
+    <div class="accordion accordion-alt-icon" id="productAccordion">
+
+      <!-- PRODUCT CERTIFICATES -->
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button animate-underline fs-xl collapsed"
+            type="button" data-bs-toggle="collapse"
+            data-bs-target="#productCertificates">
+
+            <span class="animate-target me-2">Product Certificates</span>
+          </button>
+        </h3>
+
+        <div id="productCertificates"
+          class="accordion-collapse collapse"
+          data-bs-parent="#productAccordion">
+
+          <div class="accordion-body fs-base">
+
+            <h6>Certificate of Analysis</h6>
+
+            <ul class="mb-4">
+
+              <li class="fs-sm"><a href="assets/img/certificates/TTD-ICE_COA_Lot_25061014.pdf" target="_blank">Ice COA Lot# 25061014</a></li>
+              <li class="fs-sm"><a href="assets/img/certificates/TTD-ICE_COA_Lot_25061119.pdf" target="_blank">Ice COA Lot# 25061119</a></li>
+              <li class="fs-sm"><a href="assets/img/certificates/TTD-ICE_COA_Lot_25061204.pdf" target="_blank">Ice COA Lot# 25061204</a></li>
+              <li class="fs-sm"><a href="assets/img/certificates/TTD-ICE_COA_Lot_25061301.pdf" target="_blank">Ice COA Lot# 25061301</a></li>
+              <li class="fs-sm"><a href="assets/img/certificates/TTD-ICE_COA_Lot_25062523.pdf" target="_blank">Ice COA Lot# 25062523</a></li>
+              <li class="fs-sm"><a href="assets/img/certificates/TTD-ICE_COA_Lot_25063006.pdf" target="_blank">Ice COA Lot# 25063006</a></li>
+              <li class="fs-sm"><a href="assets/img/certificates/TTD-ICE_COA_Lot_25070218.pdf" target="_blank">Ice COA Lot# 25070218</a></li>
+              <li class="fs-sm"><a href="assets/img/certificates/TTD-ICE_COA_Lot_25070801.pdf" target="_blank">Ice COA Lot# 25070801</a></li>
+              <li class="fs-sm"><a href="assets/img/certificates/TTD-ICE_COA_Lot_25072206.pdf" target="_blank">Ice COA Lot# 25072206</a></li>
+              <li class="fs-sm"><a href="assets/img/certificates/TTD-ICE_COA_Lot_25073008.pdf" target="_blank">Ice COA Lot# 25073008</a></li>
+              <li class="fs-sm"><a href="assets/img/certificates/TTD-ICE_COA_Lot_25080507.pdf" target="_blank">Ice COA Lot# 25080507</a></li>
+              <li class="fs-sm"><a href="assets/img/certificates/TTD-ICE_COA_Lot_25082602.pdf" target="_blank">Ice COA Lot# 25082602</a></li>
+              <li class="fs-sm"><a href="assets/img/certificates/TTD-ICE_COA_Lot_25092508.pdf" target="_blank">Ice COA Lot# 25092508</a></li>
+              <li class="fs-sm"><a href="assets/img/certificates/TTD-ICE_COA_Lot_25093013.pdf" target="_blank">Ice COA Lot# 25093013</a></li>
+              <li class="fs-sm"><a href="assets/img/certificates/TTD-ICE_COA_Lot_25101418.pdf" target="_blank">Ice COA Lot# 25101418</a></li>
+              <li class="fs-sm"><a href="assets/img/certificates/TTD-ICE_COA_Lot_25102215.pdf" target="_blank">Ice COA Lot# 25102215</a></li>
+              <li class="fs-sm"><a href="assets/img/certificates/TTD-ICE_COA_Lot_25102310.pdf" target="_blank">Ice COA Lot# 25102310</a></li>
+              <li class="fs-sm"><a href="assets/img/certificates/TTD-ICE_COA_Lot_25111426.pdf" target="_blank">Ice COA Lot# 25111426</a></li>
+              <li class="fs-sm"><a href="assets/img/certificates/TTD-ICE_COA_Lot_26012937.pdf" target="_blank">Ice COA Lot# 26012937</a></li>
+              <li class="fs-sm"><a href="assets/img/certificates/TTD-ICE_COA_Lot_26021202.pdf" target="_blank">Ice COA Lot# 26021202</a></li>
+              <li class="fs-sm"><a href="assets/img/certificates/TTD-ICE_COA_Lot_26022514.pdf" target="_blank">Ice COA Lot# 26022514</a></li>
+              <li class="fs-sm"><a href="assets/img/certificates/TTD-ICE_COA_Lot_26030923.pdf" target="_blank">Ice COA Lot# 26030923</a></li>
+
+              <!-- ADD ALL REMAINING COA LINKS FROM REFERENCE HERE -->
+              <!-- Continue same pattern -->
+
+            </ul>
+
+
+            <h6>Safety Data Sheet</h6>
+            <p class="fs-sm">
+              <a href="assets/img/certificates/TTD-ICE_SDS.pdf" target="_blank">
+                Ice SDS
+              </a>
+            </p>
+            <h6>Product Data Sheet</h6>
+            <p class="fs-sm">
+              <a href="assets/img/certificates/TTD-ICE_PDS.pdf" target="_blank">
+                Ice PDS
+              </a>
+            </p class="fs-sm">
+            <h6>Manufacturing Data Sheet & Natural Declaration</h6>
+            <p>
+              <a href="assets/img/certificates/TTD-ICE_MDS.pdf" target="_blank">
+                Ice MDS
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- TRUE TERPENES CERTIFICATES -->
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button animate-underline fs-xl collapsed"
+            data-bs-toggle="collapse"
+            data-bs-target="#trueTerpCertificates">
+            <span class="animate-target me-2">
+              True Terpenes Certificates
+            </span>
+          </button>
+        </h3>
+
+        <div id="trueTerpCertificates"
+          class="accordion-collapse collapse"
+          data-bs-parent="#productAccordion">
+          <div class="accordion-body fs-base">
+            <p class="fw-sm">
+              <a href="assets/img/certificates/ISO_True_Terpenes.pdf" target="_blank">ISO 9001:2015 Certification</a> |
+              <a href="assets/img/certificates/GMP_True_Terpenes.pdf" target="_blank">GMP Certification</a> |
+              <a href="assets/img/certificates/FSSC_True_Terpenes.pdf" target="_blank">FSSC 22000 Certification</a> |
+              <a href="assets/img/certificates/Kosher_Certification_True_Terpenes.pdf" target="_blank">Kosher Certification</a> |
+              <a href="assets/img/certificates/Food_Safety_Policy_Statement_True_Terpenes.pdf" target="_blank">Food Safety Policy Statement</a> |
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- STORAGE AND DILUTION -->
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button animate-underline fs-xl collapsed"
+            data-bs-toggle="collapse"
+            data-bs-target="#storageDilution">
+            <span class="animate-target me-2">
+              Storage and Dilution
+            </span>
+          </button>
+        </h3>
+
+        <div id="storageDilution"
+          class="accordion-collapse collapse"
+          data-bs-parent="#productAccordion">
+          <div class="accordion-body fs-base">
+            <p><strong>Storage Requirements</strong></p>
+            <p>
+            Keep in original container, keep refrigerated for optimal freshness,
+            lid securely tightened and away from heat, sunlight, open flames and hot surfaces.
+            Store in a cool dry place.
+            </p>
+            <p><strong>Dilution</strong></p>
+            <p>
+            Terpene products must be diluted prior to use.
+            Dilute between 1%–5% by weight depending on application.
+            Terpenes are oil soluble.
+            </p>
+            <p><strong>Handle With Care</strong></p>
+            <p>
+            May cause skin irritation.
+            Do not use prior to dilution.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- WARNING & DISCLAIMER -->
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button animate-underline fs-xl collapsed"
+            data-bs-toggle="collapse"
+            data-bs-target="#warningDisclaimer">
+            <span class="animate-target me-2">
+              Warning and Disclaimer
+            </span>
+          </button>
+        </h3>
+        <div id="warningDisclaimer"
+          class="accordion-collapse collapse"
+          data-bs-parent="#productAccordion">
+          <div class="accordion-body fs-base">
+            <p>
+            This product is a concentrated material and must be diluted prior to use.
+            Avoid contact with skin and eyes.
+            Do not ingest undiluted.
+            </p>
+            <p>
+            Keep away from heat, sparks, open flames and hot surfaces.
+            Use only in well ventilated areas.
+            </p>
+            <p>
+            This product is not intended to diagnose, treat,
+            cure or prevent any disease.
+            </p>
+            <p>
+            Users assume full responsibility for the safe handling and
+            application of this product.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- COMPLIANCE PACKET -->
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button animate-underline fs-xl collapsed"
+            data-bs-toggle="collapse"
+            data-bs-target="#compliancePacket">
+            <span class="animate-target me-2">
+              Compliance Packet
+            </span>
+          </button>
+        </h3>
+        <div id="compliancePacket"
+          class="accordion-collapse collapse"
+          data-bs-parent="#productAccordion">
+          <div class="accordion-body fs-base">
+            <p>
+              Download the complete compliance documentation here:
+            </p>
+            <p>
+              <a href="/compliance-packet/" target="_blank">
+                Download Compliance Packet
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Terpene Mixing Calculator -->
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button animate-underline fs-xl collapsed"
+            data-bs-toggle="collapse"
+            data-bs-target="#mixingCalculator">
+            <span class="animate-target me-2">
+              Terpene Mixing Calculator
+            </span>
+          </button>
+        </h3>
+
+        <div id="mixingCalculator"
+          class="accordion-collapse collapse"
+          data-bs-parent="#productAccordion">
+
+          <div class="accordion-body fs-base">
+
+            <p class="mb-4">
+              Use this calculator to determine how much terpene blend to add to your formulation.
+            </p>
+
+            <div class="row g-3">
+            <!-- Extract -->
+            <div class="col-12">
+            <label class="form-label fw-semibold">Starting Extract (grams)</label>
+            <p class="fs-sm text-muted">How many <b>grams of extract</b> are you mixing?</p>
+            <input type="number" class="form-control calc-input" id="extract">
+            </div>
+
+            <!-- Modifier -->
+            <div class="col-12">
+            <label class="form-label fw-semibold">Desired Diluent %</label>
+            <p class="fs-sm text-muted">What percentage of <b>modifier</b> are you adding?</p>
+            <input type="number" class="form-control calc-input" id="diluent">
+            </div>
+
+            <!-- Terpenes -->
+            <div class="col-12">
+            <label class="form-label fw-semibold">Desired Terpene %</label>
+            <p class="fs-sm text-muted">What percentage of <b>terpenes</b> are you adding?</p>
+            <input type="number" class="form-control calc-input" id="terpene">
+            </div>
+
+            </div>
+
+            <!-- RESULTS -->
+            <div id="mixResults" class="mt-4 d-none">
+
+            <hr class="my-4">
+
+            <h5 class="mb-3">Mixing Results</h5>
+
+            <div class="row g-3">
+
+            <div class="col-md-6">
+            <label class="form-label">Total Dilution %</label>
+            <input type="text" class="form-control" id="totalDilution" readonly>
+            </div>
+
+            <div class="col-md-6">
+            <label class="form-label">Total Weight (grams)</label>
+            <input type="text" class="form-control" id="totalWeight" readonly>
+            </div>
+
+            <div class="col-md-6">
+            <label class="form-label">Terpenes to Add (grams)</label>
+            <input type="text" class="form-control" id="terpGram" readonly>
+            </div>
+
+            <div class="col-md-6">
+            <label class="form-label">Terpenes to Add (ml)</label>
+            <input type="text" class="form-control" id="terpMl" readonly>
+            </div>
+
+            <div class="col-md-6">
+            <label class="form-label">Modifier to Add (grams)</label>
+            <input type="text" class="form-control" id="modGram" readonly>
+            </div>
+
+            <div class="col-md-6">
+            <label class="form-label">Modifier to Add (ml)</label>
+            <input type="text" class="form-control" id="modMl" readonly>
+            </div>
+
+            </div>
+            </div>
+            <!-- Button -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+          </div>
+          </div>
+        </section>
+
+
+        <!-- Popular products carousel -->
+        <section class="pb-5 mb-1 mb-sm-3 mb-lg-4 mb-xl-5">
+          <div class="container">
+          <span>Featured Products</span>
+          <h2 class="h3 pb-2 pb-sm-3">You Might Also Like</h2>
+          <div class="position-relative pb-xxl-3">
+
+            <!-- External slider prev/next buttons visible on screens > 500px wide (sm breakpoint) -->
+            <button type="button" class="popular-prev btn btn-icon btn-outline-secondary bg-body rounded-circle animate-slide-start position-absolute top-50 start-0 z-2 translate-middle mt-n5 d-none d-sm-inline-flex" aria-label="Prev">
+              <i class="ci-chevron-left fs-lg animate-target"></i>
+            </button>
+            <button type="button" class="popular-next btn btn-icon btn-outline-secondary bg-body rounded-circle animate-slide-end position-absolute top-50 start-100 z-2 translate-middle mt-n5 d-none d-sm-inline-flex" aria-label="Next">
+              <i class="ci-chevron-right fs-lg animate-target"></i>
+            </button>
+
+            <!-- Slider -->
+            <div class="swiper" data-swiper='{
+              "slidesPerView": 2,
+              "spaceBetween": 24,
+              "loop": true,
+              "navigation": {
+                "prevEl": ".popular-prev",
+                "nextEl": ".popular-next"
+              },
+              "breakpoints": {
+                "768": {
+                  "slidesPerView": 3
+                },
+                "992": {
+                  "slidesPerView": 4
+                }
+              }
+            }'>
+              <div class="swiper-wrapper">
+
+                <!-- Item -->
+                <div class="swiper-slide">
+                  <div class="col">
+                <div class="mb-4 d-flex flex-column h-100"> 
+                  <div class="position-relative overflow-hidden rounded-4 mb-3 product-image-hover">
+                    <a class="d-block ratio ratio-1x1 bg-secondary" href="#">
+                      <img src="assets/img/shop/Skunk_Modifier-scaled.webp" class="w-100 " alt="Ice">
+                      <div class="product-hover-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center p-3 opacity-0 transition-base text-center">
+                        <p class="text-white fs-xs mb-0 px-2">What’s cooler than being cool? Ice Modifier brings a refreshing chill to any profile without changing the flavor. Just a clean, cooling sensation on the tongue. Tap into this trend and put it on Ice.
+                          &nbsp;
+                          Ice Modifier is highly concentrated and is designed to be used at a lower percentage than our typical terpene blends.&nbsp;Do not exceed 0.59% total usage of this material in final inhalable products.&nbsp;Download the Modifier SOP for recommended pairings, inclusion percentages, and formulation guidance.</p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="flex-grow-1">
+                  <h3 class="h6 mb-0">
+                    <a href="#" class="product-title-hover">
+                      Ice
+                    </a>
+                  </h3>
+                  <div class="fs-sm text-muted mb-3">Modifiers</div>
+                  </div>
+
+                  <div class="d-flex align-items-center justify-content-between mb-3">
+                    <div class="d-flex align-items-center gap-2">
+                      <span class="fs-xs fw-bold text-dark">Size:</span>
+                      <select class="form-select form-select-sm border-0 bg-transparent fw-medium p-0 pe-4 shadow-none" style="width: auto;">
+                        <option>5mL</option>
+                        <option>1oz</option>
+                      </select>
+                    </div>
+
+                    <div class="d-flex align-items-center count-input rounded-pill border shadow-none">
+                      <button type="button" class="btn btn-icon btn-sm" data-decrement aria-label="Decrement quantity">
+                        <i class="ci-minus"></i>
+                      </button>
+                      <input type="number" class="form-control form-control-sm fs-xs fw-bold p-0 text-center" value="1" min="1" readonly>
+                      <button type="button" class="btn btn-icon btn-sm" data-increment aria-label="Increment quantity">
+                        <i class="ci-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn btn-outline-secondary w-100 rounded-pill d-flex justify-content-between align-items-center text-dark border-1 hover-blue-atc">
+                    <span class=" fs-sm">Add to Cart</span>
+                    <span class=" fs-sm">$35.00</span>
+                  </button>
+                </div>
+              </div>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide">
+                  <div class="col">
+                <div class="mb-4 d-flex flex-column h-100"> 
+                  <div class="position-relative overflow-hidden rounded-4 mb-3 product-image-hover">
+                    <a class="d-block ratio ratio-1x1 bg-secondary" href="#">
+                      <img src="assets/img/shop/Sweet_Modifier-600x600.webp" class="w-100 " alt="Ice">
+                      <div class="product-hover-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center p-3 opacity-0 transition-base text-center">
+                        <p class="text-white fs-xs mb-0 px-2">
+                          Make the sweet sweeter, or take fruity and fresh to full-on candy shop flavor. Sweet Modifier transforms flavors into their most decadent versions, from hard candy and chewy confections to cake and ice cream.
+                          &nbsp;
+                          Sweet Modifier is highly concentrated and is designed to be used at a lower percentage than our typical terpene blends.&nbsp;Do not exceed 1.06% total usage of this material in final inhalable products. Download the Modifier SOP for recommended pairings, inclusion percentages, and formulation guidance.
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="flex-grow-1">
+                  <h3 class="h6 mb-0">
+                    <a href="#" class="product-title-hover">
+                      Sweet
+                    </a>
+                  </h3>
+                  <div class="fs-sm text-muted mb-3">Modifiers</div>
+                  </div>
+
+                  <div class="d-flex align-items-center justify-content-between mb-3">
+                    <div class="d-flex align-items-center gap-2">
+                      <span class="fs-xs fw-bold text-dark">Size:</span>
+                      <select class="form-select form-select-sm border-0 bg-transparent fw-medium p-0 pe-4 shadow-none" style="width: auto;">
+                        <option>5mL</option>
+                        <option>1oz</option>
+                      </select>
+                    </div>
+
+                    <div class="d-flex align-items-center count-input rounded-pill border shadow-none">
+                      <button type="button" class="btn btn-icon btn-sm" data-decrement aria-label="Decrement quantity">
+                        <i class="ci-minus"></i>
+                      </button>
+                      <input type="number" class="form-control form-control-sm fs-xs fw-bold p-0 text-center" value="1" min="1" readonly>
+                      <button type="button" class="btn btn-icon btn-sm" data-increment aria-label="Increment quantity">
+                        <i class="ci-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn btn-outline-secondary w-100 rounded-pill d-flex justify-content-between align-items-center text-dark border-1 hover-blue-atc">
+                    <span class=" fs-sm">Add to Cart</span>
+                    <span class=" fs-sm">$35.00</span>
+                  </button>
+                </div>
+              </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- External slider prev/next buttons visible on screens < 500px wide (sm breakpoint) -->
+          <div class="d-flex justify-content-center gap-2 mt-1 pt-4 d-sm-none">
+            <button type="button" class="popular-prev btn btn-icon btn-outline-secondary bg-body rounded-circle animate-slide-start me-1" aria-label="Prev">
+              <i class="ci-chevron-left fs-lg animate-target"></i>
+            </button>
+            <button type="button" class="popular-next btn btn-icon btn-outline-secondary bg-body rounded-circle animate-slide-end" aria-label="Next">
+              <i class="ci-chevron-right fs-lg animate-target"></i>
+            </button>
+          </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+
+    <!-- Page footer -->
+    <footer class="footer pt-5 pb-4 text-white" style="background-color: #080b12;">
+    
+      <div class="mb-5 px-5">
+        <p class="mb-2 text-uppercase">Quality Certifications</p>
+        <h2 class="text-white fw-bold display-6">Our True Grade Quality platform is built on a foundation of third-party
+          certifications and internal QA programs to deliver the industry's highest standards of quality and safety.</h2>
+        <div class="container py-5">
+          <div class="row align-items-center text-center gy-4">
+    
+            <!-- TRUE GRADE -->
+            <div class="col-6 col-md-4 col-lg border-end border-secondary">
+              <picture>
+                <source srcset="assets/img/home/icons/true-grade.webp" type="image/webp">
+                <source srcset="assets/img/home/icons/true-grade.png" type="image/png">
+                <img src="assets/img/home/icons/true-grade.png" class="img-fluid mb-3" alt="True Grade Quality" width="150"
+                  height="150">
+              </picture>
+    
+              <p class="mb-0">
+                <a href="#" class="text-white text-decoration-none small">
+                  About True Grade
+                </a>
+              </p>
+            </div>
+    
+            <!-- ISO -->
+            <div class="col-6 col-md-4 col-lg">
+              <picture>
+                <source srcset="assets/img/home/icons/iso-certified.webp" type="image/webp">
+                <source srcset="assets/img/home/icons/iso-certified.png" type="image/png">
+                <img src="assets/img/home/icons/iso-certified.png" class="img-fluid" alt="ISO Certified" width="150" height="150">
+              </picture>
+            </div>
+    
+            <!-- CGMP -->
+            <div class="col-6 col-md-4 col-lg">
+              <picture>
+                <source srcset="assets/img/home/icons/cgmp.webp" type="image/webp">
+                <source srcset="assets/img/home/icons/cgmp.png" type="image/png">
+                <img src="assets/img/home/icons/cgmp.png" class="img-fluid" alt="CGMP Certified" width="150" height="150">
+              </picture>
+            </div>
+    
+            <!-- FSSC -->
+            <div class="col-6 col-md-6 col-lg">
+              <picture>
+                <source srcset="assets/img/home/icons/fssc.webp" type="image/webp">
+                <source srcset="assets/img/home/icons/fssc.png" type="image/png">
+                <img src="assets/img/home/icons/fssc.png" class="img-fluid" alt="FSSC 22000 Certified" width="150" height="150">
+              </picture>
+            </div>
+    
+            <!-- KOSHER -->
+            <div class="col-6 col-md-6 col-lg">
+              <picture>
+                <source srcset="assets/img/home/icons/kosher.webp" type="image/webp">
+                <source srcset="assets/img/home/icons/kosher.png" type="image/png">
+                <img src="assets/img/home/icons/kosher.png" class="img-fluid" alt="Kosher Certified" width="150" height="150">
+              </picture>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+    
+      <div class="pt-sm-2 pt-md-3 pt-lg-4">
+        <div class="row pb-5 mb-lg-3 px-5 justify-content-center">
+    
+          <!-- Columns with links -->
+          <div class="col-xl-8 pb-2 pb-md-0 mb-4 mb-md-0 mt-n3 mt-sm-0">
+            <div class="accordion" id="footerLinks">
+    
+              <div class="row">
+    
+                <!-- Our Products -->
+                <div class="accordion-item col-12 col-sm-6 col-md-3 border-0">
+                  <h6 class="text-white fw-bold accordion-header">
+                    Our Products
+                  </h6>
+    
+                  <ul class="nav flex-column gap-2 pt-sm-3 pb-3 pb-sm-0 mt-n1 mb-1 mb-sm-0">
+                    <li class="d-flex w-100 pt-1"><a class="nav-link p-0 text-white hover-effect-underline"
+                        href="#!">Shop</a></li>
+                    <li class="d-flex w-100 pt-1"><a class="nav-link p-0 text-white hover-effect-underline" href="#!">New
+                        Arrivals</a></li>
+                    <li class="d-flex w-100 pt-1"><a class="nav-link p-0 text-white hover-effect-underline" href="#!">Best
+                        Sellers</a></li>
+                    <li class="d-flex w-100 pt-1"><a class="nav-link p-0 text-white hover-effect-underline" href="#!">Quick
+                        Order</a></li>
+                    <li class="d-flex w-100 pt-1"><a class="nav-link p-0 text-white hover-effect-underline"
+                        href="#!">Sale</a></li>
+                    <li class="d-flex w-100 pt-1"><a class="nav-link p-0 text-white hover-effect-underline"
+                        href="#!">Business Samples</a></li>
+                  </ul>
+    
+                  <hr class="d-sm-none my-0">
+                </div>
+    
+    
+                <!-- Help -->
+                <div class="accordion-item col-12 col-sm-6 col-md-3 border-0">
+                  <h6 class="text-white fw-bold accordion-header">
+                    Help
+                  </h6>
+    
+                  <ul class="nav flex-column gap-2 pt-sm-3 pb-3 pb-sm-0 mt-n1 mb-1 mb-sm-0">
+                    <li class="d-flex w-100 pt-1"><a class="nav-link p-0 text-white hover-effect-underline" href="#!">Order
+                        Status</a></li>
+                    <li class="d-flex w-100 pt-1"><a class="nav-link p-0 text-white hover-effect-underline"
+                        href="#!">Shipping & International
+                        Orders</a></li>
+                    <li class="d-flex w-100 pt-1"><a class="nav-link p-0 text-white hover-effect-underline"
+                        href="#!">Returns</a></li>
+                    <li class="d-flex w-100 pt-1"><a class="nav-link p-0 text-white hover-effect-underline"
+                        href="#!">Warranty</a></li>
+                    <li class="d-flex w-100 pt-1"><a class="nav-link p-0 text-white hover-effect-underline" href="#!">My
+                        Account</a></li>
+                    <li class="d-flex w-100 pt-1"><a class="nav-link p-0 text-white hover-effect-underline"
+                        href="#!">FAQs</a></li>
+                    <li class="d-flex w-100 pt-1"><a class="nav-link p-0 text-white hover-effect-underline"
+                        href="#!">Contact Us</a></li>
+                  </ul>
+    
+                  <hr class="d-sm-none my-0">
+                </div>
+    
+    
+                <!-- Learn -->
+                <div class="accordion-item col-12 col-sm-6 col-md-3 border-0 pt-5 pt-md-0">
+                  <h6 class="text-white fw-bold accordion-header">
+                    Learn
+                  </h6>
+    
+                  <ul class="nav flex-column gap-2 pt-sm-3 pb-3 pb-sm-0 mt-n1 mb-1 mb-sm-0">
+                    <li class="d-flex w-100 pt-1"><a class="nav-link p-0 text-white hover-effect-underline" href="#!">What
+                        Are Terpenes</a></li>
+                    <li class="d-flex w-100 pt-1"><a class="nav-link p-0 text-white hover-effect-underline"
+                        href="#!">Learn</a></li>
+                    <li class="d-flex w-100 pt-1"><a class="nav-link p-0 text-white hover-effect-underline"
+                        href="#!">Terpene Mixing Calculator</a>
+                    </li>
+                    <li class="d-flex w-100 pt-1"><a class="nav-link p-0 text-white hover-effect-underline" href="#!">COA
+                        and Document Finder</a>
+                    </li>
+                    <li class="d-flex w-100 pt-1"><a class="nav-link p-0 text-white hover-effect-underline"
+                        href="#!">Quality & Safety</a></li>
+                  </ul>
+    
+                  <hr class="d-sm-none my-0">
+                </div>
+    
+    
+                <!-- About Us -->
+                <div class="accordion-item col-12 col-sm-6 col-md-3 border-0 pt-5 pt-md-0">
+                  <h6 class="text-white fw-bold accordion-header">
+                    About Us
+                  </h6>
+    
+                  <ul class="nav flex-column gap-2 pt-sm-3 pb-3 pb-sm-0 mt-n1 mb-1 mb-sm-0">
+                    <li class="d-flex w-100 pt-1"><a class="nav-link p-0 text-white hover-effect-underline"
+                        href="#!">Applications</a></li>
+                    <li class="d-flex w-100 pt-1"><a class="nav-link p-0 text-white hover-effect-underline"
+                        href="#!">Solutions</a></li>
+                    <li class="d-flex w-100 pt-1"><a class="nav-link p-0 text-white hover-effect-underline" href="#!">Our
+                        Story</a></li>
+                    <li class="d-flex w-100 pt-1"><a class="nav-link p-0 text-white hover-effect-underline"
+                        href="#!">Culture</a></li>
+                    <li class="d-flex w-100 pt-1"><a class="nav-link p-0 text-white hover-effect-underline"
+                        href="#!">Careers</a></li>
+                    <li class="d-flex w-100 pt-1"><a class="nav-link p-0 text-white hover-effect-underline" href="#!">Press
+                        & News</a></li>
+                  </ul>
+    
+                  <hr class="d-sm-none my-0">
+                </div>
+    
+              </div>
+    
+            </div>
+          </div>
+    
+          <!-- Email Subscription -->
+          <div class="col-xl-4 ps-md-5 pt-5 pt-xl-0 position-relative">
+    
+            <!-- separator line visible only from md -->
+            <span class="vr position-absolute top-0 start-0 h-100 d-none d-xl-block"></span>
+            <h6 class="mb-4 text-white">Email Sign Up</h6>
+            <p class="fs-sm mb-3">
+              Sign up to get 20% off your first order *
+            </p>
+            <form class="needs-validation" novalidate>
+    
+              <div class="position-relative mt-2">
+    
+                <input type="email" class="form-control form-control-lg bg-image-none text-start"
+                  placeholder="Enter your email" aria-label="Your email address" required>
+    
+                <div class="invalid-tooltip bg-transparent p-0">
+                  Please enter your email address!
+    
+                </div>
+                <button type="submit" class="btn fs-xl btn-info border-0 position-absolute top-0 end-0 mt-1 me-1"
+                  aria-label="Submit your email address">
+    
+                  <span>Send</span>
+    
+                </button>
+    
+    
+              </div>
+    
+            </form>
+    
+            <p class="fs-xs mt-3">
+              By signing up you agree to receive recurring automated marketing messages.
+              View <a class="nav-link d-inline fw-normal text-truncate p-0 text-decoration-underline" href="#!">Terms &amp;
+                Privacy</a>.
+            </p>
+    
+            <p class="fs-xs">
+              * Not valid on the purchase of isolates.
+              Cannot be stacked or combined with other discounts.
+            </p>
+    
+            <p class="fs-sm mt-3">
+              +1 (888) 954-8550
+            </p>
+    
+          </div>
+    
+        </div>
+      </div>
+    
+      <div class="container d-lg-flex flex-column align-items-center border-top pt-4 mt-3">
+    
+        <!-- Links Row -->
+        <ul class="nav flex-wrap justify-content-center gap-2 mb-2 text-center">
+    
+          <li class="nav-item">
+            <span class="nav-link fs-xs fw-normal p-0 text-white">
+              Copyright 2026 True Terpenes •
+            </span>
+          </li>
+    
+          <li class="nav-item">
+            <a class="nav-link fs-xs fw-normal p-0 text-white" href="#!">
+              Terms of Sale •
+            </a>
+          </li>
+    
+          <li class="nav-item">
+            <a class="nav-link fs-xs fw-normal p-0 text-white" href="#!">
+              Terms of Use •
+            </a>
+          </li>
+    
+          <li class="nav-item">
+            <a class="nav-link fs-xs fw-normal p-0 text-white" href="#!">
+              Privacy Policy •
+            </a>
+          </li>
+    
+          <li class="nav-item">
+            <a class="nav-link fs-xs fw-normal p-0 text-white" href="#!">
+              Cookie Policy •
+            </a>
+          </li>
+    
+          <li class="nav-item">
+            <a class="nav-link fs-xs fw-normal p-0 text-white" href="#!">
+              Cookie Preferences
+            </a>
+          </li>
+    
+        </ul>
+    
+        <!-- Second Row -->
+        <p class="fs-xs mb-1 text-center">
+          <a class="nav-link p-0 d-inline fs-xs text-white" href="#!">
+            Do Not Sell My Personal Information
+          </a>
+        </p>
+    
+        <!-- Third Row -->
+        <p class="fs-xs text-center mb-0 text-white">
+          You must be 21 years or older to purchase products from this website.
+        </p>
+    
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <div class="floating-buttons position-fixed top-50 end-0 z-sticky me-3 me-xl-4 pb-4">
+      <a class="btn-scroll-top btn btn-sm bg-body border-0 rounded-pill shadow animate-slide-end" href="#top">
+        Top
+        <i class="ci-arrow-right fs-base ms-1 me-n1 animate-target"></i>
+        <span class="position-absolute top-0 start-0 w-100 h-100 border rounded-pill z-0"></span>
+        <svg class="position-absolute top-0 start-0 w-100 h-100 z-1" viewBox="0 0 62 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x=".75" y=".75" width="60.5" height="30.5" rx="15.25" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
+        </svg>
+      </a>
+    </div>
+
+
+    <!-- Vendor scripts -->
+    <script src="assets/vendor/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/dist/js/glightbox.min.js"></script>
+
+    <!-- Bootstrap + Theme scripts -->
+    <script src="assets/js/theme.min.js"></script>
+    <script>
+const priceBox = document.getElementById("productPrice");
+const sizeOptions = document.querySelectorAll('input[name="size"]');
+
+sizeOptions.forEach(option => {
+  option.addEventListener("change", function(){
+
+    const price = this.dataset.price;
+
+    if(price === "wholesale"){
+      priceBox.textContent = "Reach out to wholesaler";
+    }else{
+      priceBox.textContent = "$" + price + ".00";
+    }
+
+  });
+});
+</script>
+<script>
+
+const inputs = document.querySelectorAll(".calc-input");
+
+inputs.forEach(input => {
+  input.addEventListener("input", calculateMix);
+});
+
+function calculateMix(){
+
+let extract = parseFloat(document.getElementById("extract").value);
+let diluent = parseFloat(document.getElementById("diluent").value);
+let terpene = parseFloat(document.getElementById("terpene").value);
+
+if(!extract || diluent === "" || terpene === ""){
+return;
+}
+
+document.getElementById("mixResults").classList.remove("d-none");
+
+let totalDilution = diluent + terpene;
+
+let base = ((extract / (1 - totalDilution/100)) - extract);
+
+let terpGram = base * (terpene / totalDilution);
+let modGram = base * (diluent / totalDilution);
+
+let terpMl = terpGram * 1.2;
+let modMl = modGram * 1.2;
+
+let totalWeight = extract + terpGram + modGram;
+
+document.getElementById("totalDilution").value = totalDilution.toFixed(2);
+
+document.getElementById("terpGram").value = terpGram.toFixed(2);
+document.getElementById("terpMl").value = terpMl.toFixed(2);
+
+document.getElementById("modGram").value = modGram.toFixed(2);
+document.getElementById("modMl").value = modMl.toFixed(2);
+
+document.getElementById("totalWeight").value = totalWeight.toFixed(2);
+
+}
+
+</script>
+  </body>
+</html>
