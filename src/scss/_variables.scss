@@ -174,8 +174,8 @@ $box-shadow-inset:            unset !default;
 
 $underline-thickness:         1px !default;
 
-$component-color:             $gray-700 !default;
-$component-hover-color:       $gray-900 !default;
+$component-color:             $gray-900 !default; //$gray-700 !default;
+$component-hover-color:       $gray-700 !default; //$gray-900 !default;
 $component-hover-bg:          $gray-50 !default;
 $component-active-color:      $gray-900 !default;
 $component-active-bg:         $gray-100 !default;
