@@ -158,6 +158,15 @@
   }
 }
 
+// Responsive classes
+@each $breakpoint, $size in $grid-breakpoints {
+  @media (min-width: $size) {
+    .w-#{$breakpoint}-50 {
+      width: 50% !important;
+    }
+  }
+}
+
 .category-content {
   display: none;
 }
