@@ -15967,6 +15967,36 @@ span.flatpickr-weekday,
   width: 60% !important;
 }
 
+@media (min-width: 0) {
+  .w-xs-75 {
+    width: 75%;
+  }
+}
+@media (min-width: 500px) {
+  .w-sm-75 {
+    width: 75%;
+  }
+}
+@media (min-width: 768px) {
+  .w-md-75 {
+    width: 75%;
+  }
+}
+@media (min-width: 992px) {
+  .w-lg-75 {
+    width: 75%;
+  }
+}
+@media (min-width: 1200px) {
+  .w-xl-75 {
+    width: 75%;
+  }
+}
+@media (min-width: 1400px) {
+  .w-xxl-75 {
+    width: 75%;
+  }
+}
 .category-content {
   display: none;
 }

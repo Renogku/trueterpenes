@@ -137,7 +137,6 @@
 //     font-size: 1.8rem;
 //     text-align: center !important;
 //   }
-
 // }
 
 .w-90 {
@@ -145,6 +144,15 @@
 }
 .w-60 {
   width: 60% !important;
+}
+
+// Responsive classes
+@each $breakpoint, $size in $grid-breakpoints {
+  @media (min-width: $size) {
+    .w-#{$breakpoint}-75 {
+      width: 75%;
+    }
+  }
 }
 
 .category-content {
