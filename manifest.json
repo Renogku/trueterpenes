@@ -1,7 +1,7 @@
 {
-  "name": "Cartzilla",
-  "short_name": "Cartzilla",
-  "description": "Multipurpose E-Commerce Bootstrap Template",
+  "name": "",
+  "short_name": "",
+  "description": "",
   "lang" : "en",
   "dir": "ltr",
   "start_url": "/index.html",
@@ -27,7 +27,7 @@
     }
   ],
   "background_color": "#fff",
-  "theme_color": "#131920",
+  "theme_color": "#fff",
   "display": "standalone",
   "orientation": "portrait-primary"
 }
