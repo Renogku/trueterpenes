@@ -166,6 +166,9 @@
 }
 
 .header-block-link {
+
+  font-weight: $font-weight-semibold;
+
   a {
     display: block;
     color: inherit;
@@ -173,7 +176,7 @@
   }
 
   &:hover {
-    background-color: $secondary;
+    background-color: #ebf4ff;
 
     h6 {
       color: $info;

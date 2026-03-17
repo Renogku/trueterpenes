@@ -15990,13 +15990,16 @@ span.flatpickr-weekday,
     opacity: 1;
   }
 }
+.header-block-link {
+  font-weight: 600;
+}
 .header-block-link a {
   display: block;
   color: inherit;
   text-decoration: none;
 }
 .header-block-link:hover {
-  background-color: #eaeaea;
+  background-color: #ebf4ff;
 }
 .header-block-link:hover h6, .header-block-link:hover .h6 {
   color: #0e61fe;
