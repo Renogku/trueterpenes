@@ -150,7 +150,7 @@
 @each $breakpoint, $size in $grid-breakpoints {
   @media (min-width: $size) {
     .w-#{$breakpoint}-75 {
-      width: 75%;
+      width: 75% !important;
     }
   }
 }
