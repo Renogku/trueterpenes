@@ -1,134 +1,134 @@
 // _user.scss
-// Use this file to write your custom SCSS
-.fade-in-img {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeUp .8s ease forwards;
-}
+// // Use this file to write your custom SCSS
+// .fade-in-img {
+//   opacity: 0;
+//   transform: translateY(30px);
+//   animation: fadeUp .8s ease forwards;
+// }
 
-/* animation priority */
-.delay-1 {
-  animation-delay: .2s;
-}
+// /* animation priority */
+// .delay-1 {
+//   animation-delay: .2s;
+// }
 
-.delay-2 {
-  animation-delay: .6s;
-}
+// .delay-2 {
+//   animation-delay: .6s;
+// }
 
-.delay-3 {
-  animation-delay: 1s;
-}
+// .delay-3 {
+//   animation-delay: 1s;
+// }
 
-@keyframes fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
+// @keyframes fade-up {
+//   from {
+//     opacity: 0;
+//     transform: translateY(30px);
+//   }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+//   to {
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
+// }
 
-/* testimonial images size */
-.testimonial-one {
-  width: 100%;
-  max-width: 1500px;
-  height: auto;
-}
+// /* testimonial images size */
+// .testimonial-one {
+//   width: 100%;
+//   max-width: 1500px;
+//   height: auto;
+// }
 
-.testimonial-two {
-  width: 100%;
-  max-width: 1500px;
-  height: auto;
-}
+// .testimonial-two {
+//   width: 100%;
+//   max-width: 1500px;
+//   height: auto;
+// }
 
-.testimonial-three {
-  width: 100%;
-  max-width: 890px;
-  height: auto;
-}
+// .testimonial-three {
+//   width: 100%;
+//   max-width: 890px;
+//   height: auto;
+// }
 
-/* responsive */
-@media (max-width: 480px) {
+// /* responsive */
+// @media (max-width: 480px) {
 
-  .testimonial-one {
-    max-width: 320px;
-  }
+//   .testimonial-one {
+//     max-width: 320px;
+//   }
 
-  .testimonial-two {
-    max-width: 260px;
-  }
+//   .testimonial-two {
+//     max-width: 260px;
+//   }
 
-  .testimonial-three {
-    max-width: 300px;
-  }
+//   .testimonial-three {
+//     max-width: 300px;
+//   }
 
-}
+// }
 
-/* ===== Additional responsiveness (without changing existing CSS) ===== */
+// /* ===== Additional responsiveness (without changing existing CSS) ===== */
 
-/* Large screens */
-@media (max-width: 1200px) {
+// /* Large screens */
+// @media (max-width: 1200px) {
 
-  .testimonial-one {
-    max-width: 1000px;
-  }
+//   .testimonial-one {
+//     max-width: 1000px;
+//   }
 
-  .testimonial-two {
-    max-width: 1000px;
-  }
+//   .testimonial-two {
+//     max-width: 1000px;
+//   }
 
-  .testimonial-three {
-    max-width: 700px;
-  }
+//   .testimonial-three {
+//     max-width: 700px;
+//   }
 
-}
+// }
 
-/* Tablets */
-@media (max-width: 992px) {
+// /* Tablets */
+// @media (max-width: 992px) {
 
-  .testimonial-one {
-    max-width: 750px;
-  }
+//   .testimonial-one {
+//     max-width: 750px;
+//   }
 
-  .testimonial-two {
-    max-width: 750px;
-  }
+//   .testimonial-two {
+//     max-width: 750px;
+//   }
 
-  .testimonial-three {
-    max-width: 520px;
-  }
+//   .testimonial-three {
+//     max-width: 520px;
+//   }
 
-}
+// }
 
-/* Small tablets */
-@media (max-width: 768px) {
+// /* Small tablets */
+// @media (max-width: 768px) {
 
-  .testimonial-one {
-    max-width: 520px;
-  }
+//   .testimonial-one {
+//     max-width: 520px;
+//   }
 
-  .testimonial-two {
-    max-width: 520px;
-  }
+//   .testimonial-two {
+//     max-width: 520px;
+//   }
 
-  .testimonial-three {
-    max-width: 380px;
-  }
+//   .testimonial-three {
+//     max-width: 380px;
+//   }
 
-}
+// }
 
-/* Improve spacing on mobile */
-@media (max-width: 768px) {
+// /* Improve spacing on mobile */
+// @media (max-width: 768px) {
 
-  .d-flex.flex-column {
-    padding: 0 20px;
-    margin-left: 0 !important;
-  }
+//   .d-flex.flex-column {
+//     padding: 0 20px;
+//     margin-left: 0 !important;
+//   }
 
-}
+// }
 
 /* Mobile heading adjustment */
 // @media (max-width: 576px) {
@@ -141,6 +141,9 @@
 
 .w-90 {
   width: 90% !important;
+}
+.w-55 {
+  width: 55% !important;
 }
 .w-60 {
   width: 60% !important;
